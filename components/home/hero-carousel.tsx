@@ -12,23 +12,23 @@ import Link from "next/link";
 const slides = [
   {
     image: "/home-car/slide1.webp",
-    title: "Welcome to Heritage Public School",
-    subtitle: "Nurturing Future Leaders Since 2004",
-    cta: "Discover More",
+    title: "Welcome to Sai English High School",
+    subtitle: "Built on a Promise, Not a Privilege — Empowering Young Minds Since 1999",
+    cta: "Discover Our Story",
     href: "/about",
   },
   {
     image: "/home-car/slide2.webp",
-    title: "World-Class Facilities",
-    subtitle: "State-of-the-art infrastructure for holistic development",
-    cta: "View Gallery",
-    href: "/gallery",
+    title: "Celebrating 25 Years of Service",
+    subtitle: "25 Years of Learning. 25 Years of Values. 25 Years of Growing Together.",
+    cta: "Our Legacy",
+    href: "/about",
   },
   {
     image: "/home-car/slide3.webp",
-    title: "Academic Excellence",
-    subtitle: "Comprehensive curriculum designed for success",
-    cta: "Our Programs",
+    title: "Our Promise: To Educate, Empower & Serve",
+    subtitle: "Comprehensive State Board curriculum, smart learning, and holistic development prepared for life.",
+    cta: "Explore Academics",
     href: "/academics",
   },
 ];

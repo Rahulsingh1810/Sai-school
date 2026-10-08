@@ -1,6 +1,7 @@
 import { HeroCarousel } from "@/components/home/hero-carousel"
 import { FeaturesSection } from "@/components/home/features-section"
 import { AboutPreview } from "@/components/home/about-preview"
+import { LegacySection } from "@/components/home/legacy-section"
 import { EventsPreview } from "@/components/home/events-preview"
 import { CTASection } from "@/components/home/cta-section"
 import { contentfulRequest } from "@/lib/contentful-client"
@@ -112,7 +113,7 @@ async function getRecentEvents(): Promise<Event[]> {
         title: item.title || "",
         date: formatDate(item.eventDate),
         time: "",
-        location: "Heritage Public School",
+        location: "Sai English High School, Adugodi",
         category: getCategory(item.title || ""),
         image: item.eventThumbnail?.url || photos[0]?.src || "/placeholder.jpg",
         description: item.description || "",
@@ -131,10 +132,12 @@ export default async function HomePage() {
   return (
     <>
       <HeroCarousel />
-      <FeaturesSection />
       <AboutPreview />
+      <FeaturesSection />
+      <LegacySection />
       <EventsPreview events={recentEvents} />
       <CTASection />
     </>
   )
 }
+

@@ -7,7 +7,7 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Heritage Public School has been instrumental in shaping my child's future. The dedicated faculty and comprehensive curriculum have exceeded our expectations.",
+      "Sai English High School has been instrumental in shaping my child's future. The dedicated faculty and value-based curriculum have exceeded our expectations.",
     name: "Sarah Johnson",
     role: "Parent of Grade 10 Student",
     image:
@@ -15,17 +15,17 @@ const testimonials = [
   },
   {
     quote:
-      "The holistic approach to education at Heritage Public School prepared me not just academically, but for life. I'm grateful for the experiences and friendships formed here.",
+      "The holistic approach to education at Sai English High School prepared me not just academically, but for life. I'm grateful for the values and friendships formed here.",
     name: "Michael Chen",
-    role: "Alumni, Class of 2020",
+    role: "Alumni",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
   },
   {
     quote:
-      "As an educator, I can confidently say that Heritage Public School provides an unparalleled learning environment where every student can thrive and reach their potential.",
+      "As an educator, I can confidently say that Sai English High School provides an inspiring learning environment where every student can thrive and discover their unique potential.",
     name: "Dr. Emily Roberts",
-    role: "Head of Science Department",
+    role: "Senior Faculty Member",
     image:
       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop",
   },

@@ -5,9 +5,9 @@ import { MapSection } from "@/components/contact/map-section";
 import { FAQSection } from "@/components/contact/faq-section";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Heritage Public School",
+  title: "Contact Us | Sai English High School",
   description:
-    "Get in touch with Heritage Public School. Contact us for admissions inquiries, campus visits, or any questions about our programs.",
+    "Get in touch with Sai English High School in Adugodi, Bangalore. Contact us for admissions inquiries, curriculum details, or campus visits.",
 };
 
 export default function ContactPage() {
@@ -15,8 +15,8 @@ export default function ContactPage() {
     <>
       <PageHeader
         badge="Contact Us"
-        title="Let's Connect"
-        description="Have questions about admissions, programs, or want to schedule a visit? We're here to help you every step of the way."
+        title="Connect with Sai English High School"
+        description="We welcome enquiries from parents, students, and well-wishers regarding admissions, academics, and school facilities."
         backgroundImage="/Facilities/building.webp"
         imagePosition=""
       />

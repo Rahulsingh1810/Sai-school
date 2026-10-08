@@ -4,18 +4,18 @@ import { FacilitiesSection } from "@/components/academics/facilities-section";
 import { CTASection } from "@/components/home/cta-section";
 
 export const metadata: Metadata = {
-  title: "Facilities | Heritage Public School",
+  title: "Facilities | Sai English High School",
   description:
-    "Explore our world-class facilities including modern classrooms, smart classes, science laboratories, library, computer centre, sports arenas, and transport services at Heritage Public School.",
+    "Explore our well-equipped campus facilities including modern classrooms, smart classes, science laboratories, library & resource centre, computer centre, and sports facilities at Sai English High School in Adugodi.",
 };
 
 export default function FacilitiesPage() {
   return (
     <>
       <PageHeader
-        badge="Our Facilities"
-        title="World-Class Infrastructure"
-        description="Step into a campus designed to inspire. Every facility at Heritage Public School has been crafted to deliver an exceptional learning experience."
+        badge="Our Campus"
+        title="World-Class Learning Environment"
+        description="Sai English High School provides a supportive and well-equipped learning environment designed to encourage academic excellence, creativity, and holistic development."
         backgroundImage="/new images/facilities-hero.webp"
         imagePosition="object-top"
       />

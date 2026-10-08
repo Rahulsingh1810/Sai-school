@@ -3,10 +3,10 @@
 import { motion, useReducedMotion } from "framer-motion"
 
 const stats = [
-  { value: "5000+", label: "Students Enrolled" },
-  { value: "200+", label: "Expert Faculty" },
-  { value: "98%", label: "Graduation Rate" },
-  { value: "150+", label: "Awards Won" },
+  { value: "1999", label: "Year Established" },
+  { value: "25+", label: "Years of Educational Service" },
+  { value: "100%", label: "Commitment to Values" },
+  { value: "1000s", label: "Students Empowered" },
 ]
 
 export function StatsSection() {

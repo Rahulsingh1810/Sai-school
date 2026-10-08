@@ -1,39 +1,44 @@
-"use client"
+"use client";
 
-import { motion, useReducedMotion } from "framer-motion"
-import { HelpCircle } from "lucide-react"
+import { motion, useReducedMotion } from "framer-motion";
+import { HelpCircle } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/accordion";
 
 const faqs = [
   {
-    question: "What are the admission requirements?",
-    answer: "Admission requirements include completed application form, previous academic records, entrance assessment, and an interview with the admissions committee. We accept applications year-round, with priority given to early applicants."
+    question: "What curriculum does Sai English High School follow?",
+    answer:
+      "Sai English High School follows the State Board Curriculum with an enriched focus on interactive smart learning, foundational concepts, and preparation for higher education.",
   },
   {
-    question: "Do you offer financial aid or scholarships?",
-    answer: "Yes, we offer merit-based scholarships and need-based financial aid to eligible students. Applications for financial assistance are reviewed confidentially by our financial aid committee."
+    question: "What are the age eligibility criteria for admission?",
+    answer:
+      "Age eligibility as of 1st June of the admission year: Pre-Nursery (3+ years), LKG (4+ years), UKG (5+ years), and Grade 1 (6+ years). Term 1 begins during the last week of May or first week of June.",
   },
   {
-    question: "What extracurricular activities are available?",
-    answer: "We offer a wide range of extracurricular activities including sports teams, music and arts programs, robotics club, debate society, drama club, community service organizations, and various academic clubs."
+    question: "What are the school and office hours?",
+    answer:
+      "School Hours: Kindergarten operates from 9:00 AM – 12:30 PM / 2:00 PM, and Classes I to X operate from 9:00 AM – 3:30 PM. Office Hours: Monday to Friday from 9:00 AM – 3:30 PM and Saturday from 9:00 AM – 1:00 PM.",
   },
   {
-    question: "What is the school's approach to technology in education?",
-    answer: "We integrate technology thoughtfully into our curriculum with smart classrooms, computer labs, and digital learning tools. Students learn to use technology as a tool for learning while maintaining a balance with traditional teaching methods."
+    question: "What extracurricular activities and sports are offered?",
+    answer:
+      "We offer a rich array of activities including yoga, dance & drama, English & Kannada debates, quiz sessions, clay modelling, art & painting, readers circle, eco club, annual sports day, athletics, and inter-house competitions.",
   },
   {
-    question: "How can I schedule a campus visit?",
-    answer: "You can schedule a campus visit by contacting our admissions office through the contact form above, by phone, or by email. We offer individual tours as well as group open house events throughout the year."
+    question: "How can parents visit the school or inquire about admissions?",
+    answer:
+      "Parents and prospective students are warmly welcome to visit the school campus during office hours. You can also reach us via phone at +91 96635 26666 / +91 90350 31256 or email srisaiselhs2000@gmail.com.",
   },
-]
+];
 
 export function FAQSection() {
-  const shouldReduceMotion = useReducedMotion()
+  const shouldReduceMotion = useReducedMotion();
 
   return (
     <section className="py-20 lg:py-28 bg-background">
@@ -42,7 +47,8 @@ export function FAQSection() {
           <div className="text-center mb-12">
             <motion.span
               initial={shouldReduceMotion ? {} : { opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5 }}
               className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4"
             >
@@ -50,7 +56,8 @@ export function FAQSection() {
             </motion.span>
             <motion.h2
               initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="font-serif text-3xl sm:text-4xl font-bold text-foreground text-balance"
             >
@@ -60,7 +67,8 @@ export function FAQSection() {
 
           <motion.div
             initial={shouldReduceMotion ? {} : { opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Accordion type="single" collapsible className="space-y-4">
@@ -68,7 +76,7 @@ export function FAQSection() {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="bg-card rounded-xl border border-border px-6 data-[state=open]:shadow-md transition-shadow"
+                  className="bg-card rounded-2xl border border-border/70 px-6 data-[state=open]:shadow-md transition-shadow"
                 >
                   <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary hover:no-underline py-5">
                     <div className="flex items-center gap-3">
@@ -76,7 +84,7 @@ export function FAQSection() {
                       <span>{faq.question}</span>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5 pl-8">
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5 pl-8 text-sm">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -86,5 +94,5 @@ export function FAQSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

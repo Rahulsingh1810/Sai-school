@@ -1,236 +1,192 @@
-"use client"
+"use client";
 
-import { motion, useReducedMotion } from "framer-motion"
-import { 
-  BookOpen, Calendar, Clock, Compass, 
-  Dumbbell, Palette, Sparkles, Award 
-} from "lucide-react"
+import { motion, useReducedMotion } from "framer-motion";
+import {
+  BookOpen,
+  Clock,
+  CheckCircle2,
+  Award,
+  Sparkles,
+  Heart,
+  Brain,
+  Compass,
+} from "lucide-react";
 
-const infoCards = [
+const pillars = [
   {
-    icon: BookOpen,
-    title: "NCERT Curriculum",
-    description: "Tailored to meet the different needs and aspirations of our students. We achieve a balance between academics and development of the body and soul."
+    icon: Award,
+    title: "Academic Excellence",
+    description: "Deep conceptual understanding and strong foundation in all State Board subjects.",
   },
   {
-    icon: Clock,
-    title: "School Timings",
-    description: "Kindergarten: 9:00 AM - 12:30 PM\nClasses I to X : 9:00 AM - 3:20 PM"
+    icon: Brain,
+    title: "Critical Thinking",
+    description: "Encouraging inquiry, logical reasoning, and independent problem-solving.",
   },
   {
-    icon: Calendar,
-    title: "Academic Calendar",
-    description: "Programmed from June to March, with two terms. Term 1 commences in June and Term 2 in November, with sporadic holidays in between."
-  }
-]
-
-const holisticPillars = [
-  {
-    icon: Dumbbell,
-    title: "Sports & Games",
-    description: "We believe only a strong body can house a strong mind. Students are encouraged to participate in a wide range of indoor and outdoor games for healthy, balanced growth."
+    icon: Heart,
+    title: "Strong Values",
+    description: "Cultivating integrity, discipline, respect, empathy, and social responsibility.",
   },
   {
     icon: Compass,
-    title: "Periodic Field Visits",
-    description: "Education should include hands-on learning. We organize periodic field visits to provide deeper insights and make classroom learning an experiential journey."
+    title: "Practical Skills",
+    description: "Hands-on projects, experiments, and real-world application of classroom learning.",
   },
   {
-    icon: Palette,
-    title: "Visual & Performing Arts",
-    description: "Nurturing a lifelong passion for and appreciation of the arts as participants and audience, including performing arts and visual arts integrated into co-curriculum."
-  }
-]
+    icon: Sparkles,
+    title: "Lifelong Learning",
+    description: "Fostering an enduring curiosity and passion for continuous knowledge acquisition.",
+  },
+];
 
-const clubs = [
-  { name: "Science Club", desc: "For young scientists to experiment and discover." },
-  { name: "English Club", desc: "Honing vocabulary, debates, and public speaking." },
-  { name: "G.K. Club", desc: "Expanding general awareness and quiz prep." },
-  { name: "Readers Club", desc: "Inculcating a lifelong passion for reading." },
-  { name: "Drama Club", desc: "Fostering theatrical expression and confidence." },
-  { name: "Math Club", desc: "Exploring mathematical puzzles and logic." },
-  { name: "Computer Club", desc: "Coding, computer education, and digital literacy." },
-  { name: "Eco Club", desc: "Environmental consciousness and green practices." },
-  { name: "Robotics Club", desc: "Designing, building, and programming autonomous robots and smart systems." },
-  { name: "Student Magazine Editorial Board", desc: "Fostering creative writing and journalism." }
-]
-
-const skillActivities = [
-  "Debates (English and Kannada)", "Public Speaking", "Youth Parliament",
-  "Creative Writing", "Quiz Sessions", "Show and Tell",
-  "Clay Modeling", "Craft Activities", "Art and Painting", "Paper Reading"
-]
-
-const extraCurriculars = [
-  { name: "Yoga", desc: "Physical harmony and mental focus." },
-  { name: "Karate", desc: "Self-defense, discipline, and stamina." },
-  { name: "Dance & Drama", desc: "Expression, creativity, and rhythm." },
-  { name: "Music", desc: "Vocal and instrumental learning." }
-]
+const timings = [
+  {
+    level: "Kindergarten",
+    time: "9:00 AM – 12:30 PM / 2:00 PM",
+    note: "Joyful play-way learning & structured foundational routines.",
+  },
+  {
+    level: "Classes I to X",
+    time: "9:00 AM – 3:30 PM",
+    note: "Excluding remedials. Comprehensive academic schedule.",
+  },
+];
 
 export function CurriculumOverview() {
-  const shouldReduceMotion = useReducedMotion()
+  const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="curriculum" className="py-20 lg:py-28 bg-secondary">
+    <section id="curriculum" className="py-20 lg:py-28 bg-secondary/50">
       <div className="container mx-auto px-4 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span
             initial={shouldReduceMotion ? {} : { opacity: 0 }}
-            animate={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4"
           >
-            Curriculum & School Life
+            Academic Framework
           </motion.span>
           <motion.h2
             initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance"
           >
-            A Journey of Holistic Growth
+            Curriculum & Academic Framework
           </motion.h2>
-          <motion.p
+          <motion.div
             initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-muted-foreground text-lg leading-relaxed"
+            className="bg-card/80 border border-border/70 rounded-2xl p-6 sm:p-8 max-w-3xl mx-auto shadow-sm"
           >
-            At Heritage Public School, education is a journey that prepares students for life. Our academic programs are designed to inspire intellectual curiosity and build character.
-          </motion.p>
+            <span className="inline-block px-3 py-1 bg-accent/20 text-accent text-xs font-bold uppercase tracking-wider rounded-full mb-3">
+              State Board Curriculum
+            </span>
+            <p className="text-foreground text-base sm:text-lg leading-relaxed mb-3 font-medium">
+              The school follows a balanced academic approach designed to develop knowledgeable, confident, and responsible learners.
+            </p>
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+              The curriculum is designed to prepare students not only for academic success, but also for life beyond the classroom.
+            </p>
+          </motion.div>
         </div>
 
-        {/* Academic & Timings Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          {infoCards.map((card, index) => (
-            <motion.div
-              key={card.title}
-              initial={shouldReduceMotion ? {} : { opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.05 * index }}
-              className="bg-card rounded-2xl p-8 shadow-sm border border-border/50 hover:shadow-md transition-all duration-300"
-            >
-              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                <card.icon className="w-7 h-7 text-primary" />
-              </div>
-              <h3 className="font-serif text-xl font-bold text-foreground mb-3">{card.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed whitespace-pre-line">{card.description}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Holistic pillars */}
+        {/* 5 Pillars of Curriculum */}
         <div className="mb-20">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-4">Beyond the Classroom</h3>
-            <p className="text-muted-foreground text-sm">We provide opportunities tailored to nurture physical, artistic, and empirical skills.</p>
+            <span className="text-xs font-bold uppercase tracking-wider text-accent">
+              Core Principles
+            </span>
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mt-1">
+              Developing Well-Rounded Learners
+            </h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {holisticPillars.map((pillar, index) => (
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {pillars.map((pillar, index) => (
               <motion.div
                 key={pillar.title}
-                initial={shouldReduceMotion ? {} : { opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 * index }}
-                className="bg-card rounded-xl p-8 border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300"
+                initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.05 * index }}
+                whileHover={{ y: -4 }}
+                className="bg-card rounded-2xl p-6 border border-border/60 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
               >
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-6">
-                  <pillar.icon className="w-6 h-6 text-accent" />
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                    <pillar.icon className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-serif text-lg font-bold text-foreground mb-2">
+                    {pillar.title}
+                  </h4>
+                  <p className="text-muted-foreground text-xs leading-relaxed">
+                    {pillar.description}
+                  </p>
                 </div>
-                <h4 className="font-serif text-lg font-bold text-foreground mb-3">{pillar.title}</h4>
-                <p className="text-muted-foreground text-sm leading-relaxed">{pillar.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
 
-        {/* Skill Development Activities & Extra-curriculars */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-          {/* Skill Honing activities */}
+        {/* School Timings & Remedial Support */}
+        <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={shouldReduceMotion ? {} : { opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-card rounded-2xl p-8 border border-border shadow-sm"
+            initial={shouldReduceMotion ? {} : { opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="bg-card rounded-3xl p-8 sm:p-10 border border-border/70 shadow-lg"
           >
-            <h3 className="font-serif text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-              <Award className="w-6 h-6 text-primary" />
-              Skill Honing Activities
-            </h3>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Under the guidance of qualified teachers, HPS provides regular skill development sessions to help pupils hone their innate talents:
-            </p>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-3">
-              {skillActivities.map((activity, idx) => (
-                <div key={idx} className="flex items-center gap-2.5 text-sm text-foreground">
-                  <div className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                  <span>{activity}</span>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                <Clock className="w-6 h-6" />
+              </div>
+              <div>
+                <h3 className="font-serif text-2xl font-bold text-foreground">
+                  School Timings
+                </h3>
+                <p className="text-xs text-muted-foreground">
+                  Daily schedule for students
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+              {timings.map((t) => (
+                <div
+                  key={t.level}
+                  className="bg-secondary/60 rounded-2xl p-6 border border-border/60"
+                >
+                  <span className="text-xs font-semibold text-accent uppercase tracking-wider block mb-1">
+                    {t.level}
+                  </span>
+                  <h4 className="font-serif text-xl sm:text-2xl font-bold text-foreground mb-2">
+                    {t.time}
+                  </h4>
+                  <p className="text-muted-foreground text-xs">{t.note}</p>
                 </div>
               ))}
             </div>
-          </motion.div>
 
-          {/* Extra Curricular training */}
-          <motion.div
-            initial={shouldReduceMotion ? {} : { opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-card rounded-2xl p-8 border border-border shadow-sm flex flex-col justify-between"
-          >
-            <div>
-              <h3 className="font-serif text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-                <Sparkles className="w-6 h-6 text-primary" />
-                Extra-Curricular Highlights
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                Designed for continuous learning, student exposure, and overall growth of body, mind, and soul:
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {extraCurriculars.map((activity, idx) => (
-                  <div key={idx} className="border-l-2 border-primary/30 pl-4 py-1">
-                    <h4 className="font-semibold text-foreground text-sm mb-1">{activity.name}</h4>
-                    <p className="text-muted-foreground text-xs">{activity.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="mt-8 pt-6 border-t border-border/80 text-center">
-              <p className="text-accent font-serif font-semibold italic text-sm">
-                &ldquo;Come and inherit heritage at HPS.&rdquo;
+            <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 flex items-center gap-3">
+              <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+              <p className="text-sm font-medium text-foreground/90">
+                <strong>Remedial Support:</strong> Individualized remedial support and academic mentoring will be provided where required to ensure no child falls behind.
               </p>
             </div>
           </motion.div>
-        </div>
-
-        {/* Clubs Grid */}
-        <div>
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-4">Student Clubs</h3>
-            <p className="text-muted-foreground text-sm">Empowering students through collaboration, exploration, and creative autonomy.</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {clubs.map((club, index) => (
-              <motion.div
-                key={club.name}
-                initial={shouldReduceMotion ? {} : { opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.04 * index }}
-                className="bg-card rounded-xl p-6 border border-border/50 hover:shadow-md hover:border-accent/30 transition-all text-left"
-              >
-                <h4 className="font-serif font-bold text-foreground mb-2 flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-accent" />
-                  {club.name}
-                </h4>
-                <p className="text-muted-foreground text-xs leading-relaxed">{club.desc}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
 
       </div>
     </section>
-  )
+  );
 }

@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     // Configure the mail transporter
     const smtpUser = process.env.SMTP_USER || process.env.EMAIL
     const smtpPass = process.env.SMTP_PASS || process.env.EMAIL_PASSWORD
-    const recipient = process.env.CONTACT_EMAIL_TO || process.env.RECIPIENT_EMAIL || "heritagepublicschoolkk@gmail.com"
+    const recipient = process.env.CONTACT_EMAIL_TO || process.env.RECIPIENT_EMAIL || "srisaiselhs2000@gmail.com"
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || "smtp.gmail.com",
@@ -42,9 +42,9 @@ export async function POST(request: NextRequest) {
       from: `"${firstName} ${lastName}" <${smtpUser}>`,
       to: recipient,
       replyTo: email,
-      subject: `New HPS Website Inquiry: ${displaySubject} - ${firstName} ${lastName}`,
+      subject: `New SEHS Website Inquiry: ${displaySubject} - ${firstName} ${lastName}`,
       text: `
-Heritage Public School - New Inquiry
+Sai English High School - New Inquiry
 
 Name: ${firstName} ${lastName}
 Email: ${email}
@@ -60,14 +60,14 @@ ${message}
         <head>
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>New HPS Contact Form Submission</title>
+          <title>New SEHS Contact Form Submission</title>
         </head>
         <body style="font-family: 'Open Sans', system-ui, -apple-system, sans-serif; background-color: #f8fafc; margin: 0; padding: 20px; -webkit-font-smoothing: antialiased;">
           <div style="max-width: 600px; margin: 20px auto; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0;">
             
             <!-- Header (School brand deep color) -->
             <div style="background-color: #0f172a; padding: 32px 40px; text-align: center;">
-              <h1 style="color: #ffffff; font-family: 'Merriweather', Georgia, serif; font-size: 24px; font-weight: 700; margin: 0; letter-spacing: 0.5px;">Heritage Public School</h1>
+              <h1 style="color: #ffffff; font-family: 'Merriweather', Georgia, serif; font-size: 24px; font-weight: 700; margin: 0; letter-spacing: 0.5px;">Sai English High School</h1>
               <p style="color: #94a3b8; font-size: 14px; margin: 8px 0 0 0; font-weight: 500;">Online Contact Form Inquiry</p>
             </div>
 
@@ -105,8 +105,8 @@ ${message}
 
             <!-- Footer (School details matching theme) -->
             <div style="background-color: #f1f5f9; padding: 28px 40px; text-align: center; font-size: 12px; color: #64748b; border-top: 1px solid #e2e8f0;">
-              <p style="margin: 0 0 6px 0;">This email was automatically generated and sent from the Heritage Public School website portal.</p>
-              <p style="margin: 0; font-weight: 500;">&copy; ${new Date().getFullYear()} Heritage Public School. All rights reserved.</p>
+              <p style="margin: 0 0 6px 0;">This email was automatically generated and sent from the Sai English High School website portal.</p>
+              <p style="margin: 0; font-weight: 500;">&copy; ${new Date().getFullYear()} Sai English High School. All rights reserved.</p>
             </div>
           </div>
         </body>

@@ -1,47 +1,80 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { MapPin, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function MapSection() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="py-20 lg:py-28 bg-secondary">
+    <section className="py-20 lg:py-28 bg-secondary/50">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <motion.span
+        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6 mb-12 max-w-5xl mx-auto">
+          <div>
+            <motion.span
+              initial={shouldReduceMotion ? {} : { opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-3"
+            >
+              Find Us
+            </motion.span>
+            <motion.h2
+              initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="font-serif text-3xl sm:text-4xl font-bold text-foreground text-balance"
+            >
+              School Location & Directions
+            </motion.h2>
+            <p className="text-muted-foreground text-sm mt-1">
+              No. 7, II Main Road, Adugodi, Bangalore – 560030
+            </p>
+          </div>
+
+          <motion.div
             initial={shouldReduceMotion ? {} : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4"
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Location
-          </motion.span>
-          <motion.h2
-            initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-serif text-3xl sm:text-4xl font-bold text-foreground text-balance"
-          >
-            Find Us on the Map
-          </motion.h2>
+            <Button
+              asChild
+              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md"
+            >
+              <a
+                href="https://maps.app.goo.gl/mU9wwrvWndQuBn3B6?g_st=iw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <MapPin className="w-4 h-4 text-accent" />
+                Open in Google Maps
+                <ExternalLink className="w-3.5 h-3.5 ml-1 opacity-70" />
+              </a>
+            </Button>
+          </motion.div>
         </div>
 
         <motion.div
           initial={shouldReduceMotion ? {} : { opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="relative aspect-[16/9] lg:aspect-[21/9] rounded-2xl overflow-hidden shadow-lg"
+          className="relative aspect-[16/9] lg:aspect-[21/9] max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-xl border border-border/60"
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.4089549847804!2d77.57082647436474!3d12.881404416850778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae155200080fa9%3A0x310569e5bf518d65!2sHeritage%20Public%20School!5e0!3m2!1sen!2sin!4v1780206069914!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.358210344445!2d77.60523277436577!3d12.948911515372487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15cd8b022ad9%3A0xe54b9f29ce2697b0!2sSai%20English%20High%20School!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Heritage Public School Location"
+            title="Sai English High School Location Adugodi"
             className="absolute inset-0"
           />
         </motion.div>
