@@ -17,7 +17,7 @@ export default function AcademicsPage() {
         badge="Academics"
         title="Excellence in Education"
         description="Discover our comprehensive academic programs designed to challenge, inspire, and prepare students for success in an ever-evolving world."
-        backgroundImage="/academics/002.webp"
+        backgroundImage="/commons/aca-hero.JPG"
       />
       <AcademicPrograms />
       <CurriculumOverview />

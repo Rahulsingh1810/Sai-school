@@ -17,7 +17,7 @@ export default function ContactPage() {
         badge="Contact Us"
         title="Connect with Sai English High School"
         description="We welcome enquiries from parents, students, and well-wishers regarding admissions, academics, and school facilities."
-        backgroundImage="/Facilities/building.webp"
+        backgroundImage="/commons/about.JPG"
         imagePosition=""
       />
       <ContactForm />

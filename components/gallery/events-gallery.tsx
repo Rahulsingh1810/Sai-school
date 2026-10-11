@@ -23,19 +23,23 @@ export interface Event {
   photos: EventPhoto[]
 }
 
-const categories = ["All", "Academic", "Cultural", "Arts"]
+import { SCHOOL_EVENTS } from "@/lib/events-data"
 
 export interface EventsGalleryProps {
   initialEvents?: Event[]
 }
 
-export function EventsGallery({ initialEvents = [] }: EventsGalleryProps) {
+export function EventsGallery({ initialEvents = SCHOOL_EVENTS }: EventsGalleryProps) {
   const shouldReduceMotion = useReducedMotion()
   const [activeCategory, setActiveCategory] = useState("All")
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null)
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null)
 
-  const displayEvents = initialEvents
+  const displayEvents = initialEvents.length > 0 ? initialEvents : SCHOOL_EVENTS
+  const categories = [
+    "All",
+    ...Array.from(new Set(displayEvents.map((e: Event) => e.category).filter(Boolean))),
+  ]
 
   useEffect(() => {
     const handleHashChange = () => {

@@ -16,7 +16,7 @@ const programs = [
     id: "pre-primary",
     title: "Pre-Primary",
     grades: "Pre-Nursery | LKG | UKG",
-    image: "/academics/nursery.webp",
+    image: "/commons/nursery.JPG",
     overview:
       "The Pre-Primary programme focuses on joyful and nurturing learning through play, exploration, discovery, and early skill development.",
     focus: [
@@ -30,7 +30,7 @@ const programs = [
     id: "primary",
     title: "Primary School",
     grades: "Classes 1 to 5",
-    image: "/academics/primary.webp",
+    image: "/commons/junior.JPG",
     overview:
       "The Primary School programme is designed to build curiosity, confidence, communication skills, creativity, and a strong academic foundation.",
     focus: [
@@ -44,7 +44,7 @@ const programs = [
     id: "middle",
     title: "Middle School",
     grades: "Classes 6 to 8",
-    image: "/new images/middleschoolnew.webp",
+    image: "/commons/middle.JPG",
     overview:
       "The Middle School programme encourages critical thinking, independent learning, exploration, and a deeper understanding of academic subjects.",
     focus: [
@@ -58,7 +58,7 @@ const programs = [
     id: "high",
     title: "High School",
     grades: "Classes 9 & 10",
-    image: "/new images/highschool-new.webp",
+    image: "/commons/high.JPG",
     overview:
       "The High School programme prepares students for higher education and future opportunities through rigorous academics, life skills, guidance, and career-oriented development.",
     focus: [

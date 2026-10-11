@@ -19,7 +19,7 @@ export default function AboutPage() {
         badge="Our Story & Philosophy"
         title="Built on a Promise, Not a Privilege"
         description="For 25 years, Sai English High School has been shaping minds and nurturing character through quality education, holistic development, and service to society."
-        backgroundImage="/home-car/003.webp"
+        backgroundImage="/commons/about-hero.JPG"
       />
       <ChairmanMessage />
       <MissionVision />

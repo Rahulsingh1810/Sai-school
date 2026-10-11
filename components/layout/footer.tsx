@@ -5,10 +5,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
 } from "lucide-react";
 
 const quickLinks = [
@@ -25,13 +21,6 @@ const academicLinks = [
   { href: "/academics#curriculum", label: "Curriculum" },
 ];
 
-const socialLinks = [
-  { href: "#", icon: Facebook, label: "Facebook" },
-  { href: "#", icon: Twitter, label: "Twitter" },
-  { href: "#", icon: Instagram, label: "Instagram" },
-  { href: "#", icon: Linkedin, label: "LinkedIn" },
-];
-
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -43,40 +32,29 @@ export function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center overflow-hidden shadow-md">
+              <div className="relative w-12 h-12 sm:w-14 sm:h-14 shrink-0 flex items-center justify-center transition-transform group-hover:scale-105">
                 <Image
-                  src="/Heritage Logo.webp"
-                  alt="Heritage Public School Logo"
-                  fill
-                  className="object-cover p-1 bg-white"
+                  src="/logo.png"
+                  alt="Sai English High School Logo"
+                  width={1167}
+                  height={1145}
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-lg font-bold tracking-tight text-white leading-none">
-                  Heritage
+                <span className="font-serif text-lg sm:text-xl font-bold tracking-tight text-white leading-none">
+                  Sai English
                 </span>
-                <span className="text-[10px] text-primary-foreground/70 font-medium tracking-widest uppercase mt-1">
-                  Public School
+                <span className="text-[10px] sm:text-xs text-primary-foreground/75 font-semibold tracking-wider uppercase mt-1">
+                  High School
                 </span>
               </div>
             </Link>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Nurturing minds, building futures. Heritage Public School is
-              dedicated to providing world-class education that empowers
-              students to become leaders of tomorrow.
+              Nurturing minds, building futures. Sai English High School is
+              dedicated to providing quality education that empowers
+              students to become compassionate and capable leaders of tomorrow.
             </p>
-            <div className="flex items-center gap-3">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -129,27 +107,27 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <span className="text-primary-foreground/80 text-sm">
-                  8th Cross, 5th Main, Srinidhi Layout,Konanakunte, Bangalore 560062
+                  No. 7, II Main Road, Adugodi, Bangalore – 560030
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <div className="flex flex-col text-sm text-primary-foreground/80">
-                  <a href="tel:+918026322111" className="hover:text-accent transition-colors">
-                    Tel: +91 80 2632 2111
+                  <a href="tel:+919663526666" className="hover:text-accent transition-colors">
+                    +91 96635 26666
                   </a>
-                  <a href="tel:+919901733776" className="hover:text-accent transition-colors">
-                    Mob: +91 99017 33776
+                  <a href="tel:+919035031256" className="hover:text-accent transition-colors">
+                    +91 90350 31256
                   </a>
                 </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent shrink-0" />
                 <a
-                  href="mailto:heritagepublicschoolkk@gmail.com"
+                  href="mailto:srisaiselhs2000@gmail.com"
                   className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
                 >
-                  heritagepublicschoolkk@gmail.com
+                  srisaiselhs2000@gmail.com
                 </a>
               </li>
             </ul>
@@ -163,7 +141,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/70">
   <div className="text-center md:text-left">
     <p>
-      &copy; {currentYear} Heritage Public School. All rights reserved.
+      &copy; {currentYear} Sai English High School. All rights reserved.
     </p>
   </div>
 

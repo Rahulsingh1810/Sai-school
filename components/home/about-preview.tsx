@@ -120,21 +120,12 @@ export function AboutPreview() {
           >
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-border/50">
               <Image
-                src="/home-car/SPF13284 a.webp"
+                src="/commons/about.JPG"
                 alt="Students at Sai English High School"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <span className="inline-block px-3 py-1 rounded-full bg-accent/90 text-accent-foreground text-xs font-semibold uppercase tracking-wider mb-1">
-                  Est. 1999 • Adugodi
-                </span>
-                <p className="text-sm font-medium text-white/90">
-                  25 Years of Dedicated Service to Education
-                </p>
-              </div>
             </div>
             {/* Decorative Element */}
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/10 rounded-2xl -z-10 blur-xl" />
@@ -155,8 +146,8 @@ export function AboutPreview() {
               Built on a Promise, Not a Privilege
             </h2>
             <p className="text-foreground/90 text-lg leading-relaxed mb-4 font-medium">
-              <strong>Sai English High School</strong>, established in 1999, is a
-              co-educational institution committed to providing quality
+              <strong>Sai English High School</strong>, established in 1999, is
+              a co-educational institution committed to providing quality
               education rooted in strong values, equal opportunity, and service
               to society.
             </p>
@@ -178,9 +169,9 @@ export function AboutPreview() {
             <div className="relative bg-secondary/70 border-l-4 border-accent rounded-r-xl p-5 mb-8 shadow-sm">
               <Quote className="w-8 h-8 text-accent/25 absolute top-3 right-3" />
               <p className="text-foreground italic leading-relaxed font-serif text-base sm:text-lg">
-                &ldquo;We believe that every child has unique potential. Education
-                should help them discover it, develop it, and use it with
-                confidence, character, and purpose.&rdquo;
+                &ldquo;We believe that every child has unique potential.
+                Education should help them discover it, develop it, and use it
+                with confidence, character, and purpose.&rdquo;
               </p>
             </div>
 
@@ -214,7 +205,8 @@ export function AboutPreview() {
               What Defines Our Education
             </h3>
             <p className="text-muted-foreground text-sm sm:text-base mt-2">
-              Discover the pillars that empower every student at Sai English High School
+              Discover the pillars that empower every student at Sai English
+              High School
             </p>
           </div>
 

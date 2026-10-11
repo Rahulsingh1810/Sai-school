@@ -13,7 +13,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "Our Story" },
   { href: "/academics", label: "Academics" },
-  { href: "/facilities", label: "Facilities" },
+  // { href: "/facilities", label: "Facilities" },
   { href: "/gallery", label: "Gallery & Events" },
   { href: "/contact", label: "Contact" },
 ]
@@ -61,34 +61,36 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow overflow-hidden">
+            <div className="relative w-12 h-12 sm:w-14 sm:h-14 shrink-0 flex items-center justify-center transition-transform group-hover:scale-105">
               <Image
-                src="/Heritage Logo.webp"
-                alt="Heritage Public School Logo"
-                fill
-                className="object-cover p-1 bg-white"
+                src="/logo.png"
+                alt="Sai English High School Logo"
+                width={1167}
+                height={1145}
+                className="w-full h-full object-contain"
+                priority
               />
             </div>
 
             <div className="flex flex-col">
               <span
                 className={cn(
-                  "font-serif text-lg font-bold tracking-tight leading-none transition-colors",
+                  "font-serif text-lg sm:text-xl font-bold tracking-tight leading-none transition-colors",
                   isTransparent ? "text-white" : "text-primary"
                 )}
               >
-                Heritage
+                Sai English
               </span>
 
               <span
                 className={cn(
-                  "text-[10px] font-medium tracking-widest uppercase mt-1 transition-colors",
+                  "text-[10px] sm:text-xs font-semibold tracking-wider uppercase mt-1 transition-colors",
                   isTransparent
-                    ? "text-white/80"
+                    ? "text-white/85"
                     : "text-muted-foreground"
                 )}
               >
-                Public School
+                High School
               </span>
             </div>
           </Link>

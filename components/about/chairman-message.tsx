@@ -21,7 +21,7 @@ export function ChairmanMessage() {
           >
             <div className="relative aspect-[3/4] max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl border border-border">
               <Image
-                src="/home-car/Prof Siddaraju S edited.webp"
+                src="/commons/chairman.JPG"
                 alt="Secretary C. Sathyanarayana - Sai English High School"
                 fill
                 className="object-cover"

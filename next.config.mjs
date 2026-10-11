@@ -4,6 +4,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
+    qualities: [60, 75],
     remotePatterns: [
       {
         protocol: 'https',
@@ -16,5 +17,3 @@ const nextConfig = {
 }
 
 export default nextConfig
-
-//deploy 16

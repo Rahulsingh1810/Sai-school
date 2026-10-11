@@ -16,46 +16,40 @@ const openSans = Open_Sans({
   variable: "--font-open-sans",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.saienglishhighschool.com";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.heritageschoolblr.org"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Heritage Public School | Nurturing Future Leaders",
-    template: "%s | Heritage Public School",
+    default: "Sai English High School | Nurturing Future Leaders",
+    template: "%s | Sai English High School",
   },
   description:
-    "Heritage Public School in Konanakunte, Bangalore is a premier educational institution committed to providing quality education and nurturing future leaders through academic excellence and holistic development.",
+    "Sai English High School in Adugodi, Bangalore is an educational institution committed to providing quality education and nurturing future leaders through academic excellence and holistic development.",
   keywords: [
-    "Heritage Public School",
-    "Heritage Public School Bangalore",
-    "Heritage Public School Bengaluru",
-    "Heritage School Bangalore",
-    "Heritage School Konanakunte",
-    "Heritage Public School Srinidhi Layout",
-    "schools in Konanakunte",
-    "best schools in Bangalore South",
-    "CBSE schools Bangalore",
-    "NCERT curriculum schools Bangalore",
-    "admissions open Bangalore schools",
-    "heritage school blr",
+    "Sai English High School",
+    "Sai English High School Bangalore",
+    "Sai English High School Adugodi",
+    "schools in Adugodi",
+    "State Board schools Bangalore",
     "quality education Bangalore",
-    "holistic development school",
-    "co-curricular activities school Bangalore"
+    "holistic development school"
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Heritage Public School | Nurturing Future Leaders",
+    title: "Sai English High School | Nurturing Future Leaders",
     description:
-      "Heritage Public School in Konanakunte, Bangalore is a premier educational institution committed to providing quality education and nurturing future leaders.",
-    url: "https://www.heritageschoolblr.org",
-    siteName: "Heritage Public School",
+      "Sai English High School in Adugodi, Bangalore is committed to providing quality education and nurturing future leaders.",
+    url: siteUrl,
+    siteName: "Sai English High School",
     images: [
       {
-        url: "/Heritage Logo.webp",
-        width: 512,
-        height: 512,
-        alt: "Heritage Public School Logo",
+        url: "/logo.png",
+        width: 1167,
+        height: 1145,
+        alt: "Sai English High School Logo",
       },
     ],
     locale: "en_US",
@@ -66,10 +60,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Heritage Public School | Nurturing Future Leaders",
+    title: "Sai English High School | Nurturing Future Leaders",
     description:
-      "Heritage Public School in Konanakunte, Bangalore is a premier educational institution committed to providing quality education.",
-    images: ["/Heritage Logo.webp"],
+      "Sai English High School in Adugodi, Bangalore is committed to providing quality education and nurturing future leaders.",
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
