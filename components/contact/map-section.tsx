@@ -74,7 +74,7 @@ export function MapSection() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
-            title="Sri Sai English High School Location Adugodi"
+            title="Sri Sri Sai English High School Location Adugodi"
             className="w-full h-full"
           />
         </motion.div>

@@ -34,31 +34,66 @@ const fieldVisitBenefits = [
 const extraCurricularActivities = [
   {
     title: "Debates (English & Kannada)",
-    skills: ["Communication Skills", "Public Speaking", "Confidence", "Critical Thinking"],
+    skills: [
+      "Communication Skills",
+      "Public Speaking",
+      "Confidence",
+      "Critical Thinking",
+    ],
   },
   {
     title: "Quiz Sessions",
-    skills: ["General Awareness", "Quick Thinking", "Knowledge Building", "Healthy Competition"],
+    skills: [
+      "General Awareness",
+      "Quick Thinking",
+      "Knowledge Building",
+      "Healthy Competition",
+    ],
   },
   {
     title: "Show and Tell",
-    skills: ["Communication", "Presentation Skills", "Confidence", "Self-Expression"],
+    skills: [
+      "Communication",
+      "Presentation Skills",
+      "Confidence",
+      "Self-Expression",
+    ],
   },
   {
     title: "Clay Modelling",
-    skills: ["Creativity", "Imagination", "Fine Motor Skills", "Artistic Expression"],
+    skills: [
+      "Creativity",
+      "Imagination",
+      "Fine Motor Skills",
+      "Artistic Expression",
+    ],
   },
   {
     title: "Craft Activities",
-    skills: ["Creativity", "Hands-on Learning", "Innovation", "Artistic Skills"],
+    skills: [
+      "Creativity",
+      "Hands-on Learning",
+      "Innovation",
+      "Artistic Skills",
+    ],
   },
   {
     title: "Art & Painting",
-    skills: ["Creative Expression", "Imagination", "Observation", "Artistic Development"],
+    skills: [
+      "Creative Expression",
+      "Imagination",
+      "Observation",
+      "Artistic Development",
+    ],
   },
   {
     title: "Paper Reading",
-    skills: ["Reading Skills", "Pronunciation", "Presentation", "Communication"],
+    skills: [
+      "Reading Skills",
+      "Pronunciation",
+      "Presentation",
+      "Communication",
+    ],
   },
 ];
 
@@ -71,12 +106,22 @@ const extraCurricularHighlights = [
   {
     name: "Dance & Drama",
     icon: Sparkles,
-    points: ["Creativity", "Expression", "Rhythm", "Confidence & Stage Presence"],
+    points: [
+      "Creativity",
+      "Expression",
+      "Rhythm",
+      "Confidence & Stage Presence",
+    ],
   },
   {
     name: "G.K. Activities",
     icon: BookOpen,
-    points: ["General Awareness", "Current Knowledge", "Quiz Preparation", "Intellectual Curiosity"],
+    points: [
+      "General Awareness",
+      "Current Knowledge",
+      "Quiz Preparation",
+      "Intellectual Curiosity",
+    ],
   },
   {
     name: "Readers Circle",
@@ -86,12 +131,22 @@ const extraCurricularHighlights = [
   {
     name: "Drama Forum",
     icon: Palette,
-    points: ["Theatrical Expression", "Communication", "Confidence", "Teamwork"],
+    points: [
+      "Theatrical Expression",
+      "Communication",
+      "Confidence",
+      "Teamwork",
+    ],
   },
   {
     name: "Eco Club",
     icon: Leaf,
-    points: ["Environmental Awareness", "Green Practices", "Nature Responsibility", "Sustainable Habits"],
+    points: [
+      "Environmental Awareness",
+      "Green Practices",
+      "Nature Responsibility",
+      "Sustainable Habits",
+    ],
   },
 ];
 
@@ -126,7 +181,6 @@ export function ActivitiesSection() {
   return (
     <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
-        
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span
@@ -154,7 +208,10 @@ export function ActivitiesSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-muted-foreground text-base sm:text-lg leading-relaxed"
           >
-            At Sai English High School, learning extends beyond academics. Students are given opportunities to develop their physical, creative, social, and practical abilities through a variety of activities and experiences.
+            At Sri Sai English High School, learning extends beyond academics.
+            Students are given opportunities to develop their physical,
+            creative, social, and practical abilities through a variety of
+            activities and experiences.
           </motion.p>
         </div>
 
@@ -175,11 +232,16 @@ export function ActivitiesSection() {
               Sports & Games
             </h3>
             <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6">
-              Sports and physical activity form an important part of a child&apos;s overall development. Students are encouraged to develop fitness, character, and sportsman spirit.
+              Sports and physical activity form an important part of a
+              child&apos;s overall development. Students are encouraged to
+              develop fitness, character, and sportsman spirit.
             </p>
             <div className="grid grid-cols-2 gap-3">
               {sportsDevelopment.map((item) => (
-                <div key={item} className="flex items-center gap-2 text-sm text-foreground/90 font-medium">
+                <div
+                  key={item}
+                  className="flex items-center gap-2 text-sm text-foreground/90 font-medium"
+                >
                   <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
                   <span>{item}</span>
                 </div>
@@ -202,11 +264,16 @@ export function ActivitiesSection() {
               Periodic Field Visits
             </h3>
             <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6">
-              Educational field visits provide students with opportunities to connect classroom learning with real-world experiences and practical environments.
+              Educational field visits provide students with opportunities to
+              connect classroom learning with real-world experiences and
+              practical environments.
             </p>
             <div className="grid grid-cols-2 gap-3">
               {fieldVisitBenefits.map((item) => (
-                <div key={item} className="flex items-center gap-2 text-sm text-foreground/90 font-medium">
+                <div
+                  key={item}
+                  className="flex items-center gap-2 text-sm text-foreground/90 font-medium"
+                >
                   <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
                   <span>{item}</span>
                 </div>
@@ -225,7 +292,8 @@ export function ActivitiesSection() {
               Extra-Curricular Activities
             </h3>
             <p className="text-muted-foreground text-sm mt-2">
-              Building confidence, creativity, communication skills, and well-rounded personality.
+              Building confidence, creativity, communication skills, and
+              well-rounded personality.
             </p>
           </div>
 
@@ -245,7 +313,10 @@ export function ActivitiesSection() {
                   </h4>
                   <ul className="space-y-1.5">
                     {act.skills.map((skill) => (
-                      <li key={skill} className="text-xs sm:text-sm text-muted-foreground flex items-center gap-2">
+                      <li
+                        key={skill}
+                        className="text-xs sm:text-sm text-muted-foreground flex items-center gap-2"
+                      >
                         <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
                         {skill}
                       </li>
@@ -288,7 +359,10 @@ export function ActivitiesSection() {
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   {club.points.map((pt) => (
-                    <span key={pt} className="text-xs font-medium bg-secondary px-2.5 py-1.5 rounded-md text-foreground/80">
+                    <span
+                      key={pt}
+                      className="text-xs font-medium bg-secondary px-2.5 py-1.5 rounded-md text-foreground/80"
+                    >
                       {pt}
                     </span>
                   ))}
@@ -311,11 +385,16 @@ export function ActivitiesSection() {
               </h3>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Cultural activities celebrate creativity, tradition, expression, and teamwork, helping students develop confidence and stage presence.
+              Cultural activities celebrate creativity, tradition, expression,
+              and teamwork, helping students develop confidence and stage
+              presence.
             </p>
             <div className="flex flex-wrap gap-2">
               {culturalEvents.map((evt) => (
-                <span key={evt} className="text-xs sm:text-sm font-medium bg-card border border-border px-3 py-1.5 rounded-full text-foreground">
+                <span
+                  key={evt}
+                  className="text-xs sm:text-sm font-medium bg-card border border-border px-3 py-1.5 rounded-full text-foreground"
+                >
                   {evt}
                 </span>
               ))}
@@ -333,11 +412,15 @@ export function ActivitiesSection() {
               </h3>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Designed to encourage active participation, healthy competition, teamwork, leadership, and physical well-being.
+              Designed to encourage active participation, healthy competition,
+              teamwork, leadership, and physical well-being.
             </p>
             <div className="flex flex-wrap gap-2">
               {sportsEvents.map((evt) => (
-                <span key={evt} className="text-xs sm:text-sm font-medium bg-card border border-border px-3 py-1.5 rounded-full text-foreground">
+                <span
+                  key={evt}
+                  className="text-xs sm:text-sm font-medium bg-card border border-border px-3 py-1.5 rounded-full text-foreground"
+                >
                   {evt}
                 </span>
               ))}
@@ -360,22 +443,30 @@ export function ActivitiesSection() {
               25th Anniversary Landmark
             </span>
             <h3 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-balance">
-              &ldquo;Rajathakalothsava&rdquo; — Silver Jubilee Annual Day Celebration
+              &ldquo;Rajathakalothsava&rdquo; — Silver Jubilee Annual Day
+              Celebration
             </h3>
             <p className="text-primary-foreground/90 text-base sm:text-lg leading-relaxed mb-6 max-w-3xl mx-auto">
-              Sai English High School recently marked a significant milestone with the celebration of its 25th Anniversary – Silver Jubilee Annual Day. The occasion celebrated 25 years of education, growth, achievement, and service to the community, bringing together students, teachers, parents, alumni, management, and well-wishers.
+              Sri Sai English High School recently marked a significant
+              milestone with the celebration of its 25th Anniversary – Silver
+              Jubilee Annual Day. The occasion celebrated 25 years of education,
+              growth, achievement, and service to the community, bringing
+              together students, teachers, parents, alumni, management, and
+              well-wishers.
             </p>
             <p className="text-primary-foreground/80 text-sm sm:text-base leading-relaxed mb-8 max-w-3xl mx-auto">
-              The Silver Jubilee was not only a celebration of the school&apos;s journey so far, but also a tribute to the generations of students and educators who have contributed to its legacy.
+              The Silver Jubilee was not only a celebration of the school&apos;s
+              journey so far, but also a tribute to the generations of students
+              and educators who have contributed to its legacy.
             </p>
             <div className="inline-block bg-accent/20 border border-accent/40 rounded-2xl px-6 py-3">
               <p className="font-serif text-base sm:text-lg font-bold text-accent tracking-wide">
-                25 Years of Learning • 25 Years of Values • 25 Years of Growing Together
+                25 Years of Learning • 25 Years of Values • 25 Years of Growing
+                Together
               </p>
             </div>
           </div>
         </motion.div>
-
       </div>
     </section>
   );

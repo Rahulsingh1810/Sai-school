@@ -10,17 +10,20 @@ export function LegacySection() {
     {
       icon: BookOpen,
       title: "25 Years of Learning",
-      description: "Nurturing academic curiosity and conceptual clarity through dedicated teaching.",
+      description:
+        "Nurturing academic curiosity and conceptual clarity through dedicated teaching.",
     },
     {
       icon: Heart,
       title: "25 Years of Values",
-      description: "Instilling discipline, empathy, character, and ethical responsibility in every child.",
+      description:
+        "Instilling discipline, empathy, character, and ethical responsibility in every child.",
     },
     {
       icon: Users,
       title: "25 Years of Growing Together",
-      description: "Partnering with parents, teachers, and the Adugodi community across generations.",
+      description:
+        "Partnering with parents, teachers, and the Adugodi community across generations.",
     },
   ];
 
@@ -39,19 +42,29 @@ export function LegacySection() {
             transition={{ duration: 0.5 }}
           >
             <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
-              <Clock className="w-4 h-4" />
-              A Legacy of Education & Service
+              <Clock className="w-4 h-4" />A Legacy of Education & Service
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
               Rooted in Tradition, Committed to Society
             </h2>
             <div className="relative bg-card/80 backdrop-blur-sm border border-border/70 rounded-2xl p-6 sm:p-8 shadow-sm">
               <p className="text-foreground/90 text-lg sm:text-xl leading-relaxed font-serif italic mb-4">
-                The philosophy of Sai English High School is deeply connected to a tradition of service to education.
+                The philosophy of Sri Sai English High School is deeply
+                connected to a tradition of service to education.
               </p>
               <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-                Inspired by <strong className="text-foreground font-semibold">Late Patel Munichinappa</strong> and{" "}
-                <strong className="text-foreground font-semibold">Late Patel Balappa</strong>, whose generous contribution of land supported education in Adugodi, the school continues that noble legacy by working tirelessly to make meaningful, high-quality education accessible to every child.
+                Inspired by{" "}
+                <strong className="text-foreground font-semibold">
+                  Late Patel Munichinappa
+                </strong>{" "}
+                and{" "}
+                <strong className="text-foreground font-semibold">
+                  Late Patel Balappa
+                </strong>
+                , whose generous contribution of land supported education in
+                Adugodi, the school continues that noble legacy by working
+                tirelessly to make meaningful, high-quality education accessible
+                to every child.
               </p>
             </div>
           </motion.div>
@@ -78,10 +91,13 @@ export function LegacySection() {
                 Celebrating 25 Years of Excellence
               </h3>
               <p className="text-primary-foreground/90 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-4">
-                Sai English High School proudly marks 25 years of education, growth, values, and service to the community.
+                Sri Sai English High School proudly marks 25 years of education,
+                growth, values, and service to the community.
               </p>
               <p className="text-primary-foreground/80 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto">
-                This milestone reflects the trust of our parents, the dedication of our teachers, the support of our well-wishers, and the remarkable achievements of generations of students.
+                This milestone reflects the trust of our parents, the dedication
+                of our teachers, the support of our well-wishers, and the
+                remarkable achievements of generations of students.
               </p>
             </motion.div>
           </div>

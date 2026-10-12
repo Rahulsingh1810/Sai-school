@@ -86,7 +86,10 @@ export function FacilitiesSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-muted-foreground text-base sm:text-lg leading-relaxed"
           >
-            Sai English High School provides a supportive and well-equipped learning environment designed to encourage academic excellence, creativity, practical learning, and the overall development of students.
+            Sri Sai English High School provides a supportive and well-equipped
+            learning environment designed to encourage academic excellence,
+            creativity, practical learning, and the overall development of
+            students.
           </motion.p>
         </div>
 

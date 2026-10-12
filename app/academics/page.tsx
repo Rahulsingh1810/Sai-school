@@ -5,9 +5,9 @@ import { CurriculumOverview } from "@/components/academics/curriculum-overview";
 import { CTASection } from "@/components/home/cta-section";
 
 export const metadata: Metadata = {
-  title: "Academics | Sai English High School",
+  title: "Academics | Sri Sai English High School",
   description:
-    "Explore the State Board curriculum, comprehensive academic programs from Pre-Primary to High School, and holistic development at Sai English High School in Adugodi.",
+    "Explore the State Board curriculum, comprehensive academic programs from Pre-Primary to High School, and holistic development at Sri Sai English High School in Adugodi.",
 };
 
 export default function AcademicsPage() {

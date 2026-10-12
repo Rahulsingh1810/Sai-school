@@ -152,9 +152,9 @@ export function MissionVision() {
               Education is for life, not just for living.
             </h3>
             <p className="text-primary-foreground/90 text-base sm:text-lg leading-relaxed mb-6">
-              At Sai English High School, we believe that education is not merely a
-              means to earn a livelihood; it is a means to build character,
-              confidence, values, and purpose.
+              At Sri Sai English High School, we believe that education is not
+              merely a means to earn a livelihood; it is a means to build
+              character, confidence, values, and purpose.
             </p>
             <p className="text-primary-foreground/80 text-sm sm:text-base leading-relaxed mb-6">
               Every child deserves access to meaningful education and an equal
@@ -164,7 +164,8 @@ export function MissionVision() {
               become responsible and compassionate members of society.
             </p>
             <p className="text-accent font-semibold text-sm sm:text-base italic">
-              This principle reflects the spirit of service and commitment to education on which the institution was founded.
+              This principle reflects the spirit of service and commitment to
+              education on which the institution was founded.
             </p>
           </div>
         </motion.div>

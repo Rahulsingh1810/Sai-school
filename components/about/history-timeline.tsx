@@ -15,15 +15,51 @@ import {
 } from "lucide-react";
 
 const pillars = [
-  { icon: Calendar, title: "Established in 1999", desc: "Founded with the mission to provide accessible, value-rooted education." },
-  { icon: Award, title: "25 Years of Service", desc: "A quarter century of dedicated educational contribution in Adugodi." },
-  { icon: Users, title: "Co-Educational Institution", desc: "Inclusive and supportive environment for all young minds." },
-  { icon: GraduationCap, title: "State Board Curriculum", desc: "Structured syllabus with strong conceptual foundations." },
-  { icon: Laptop, title: "Smart & Interactive Learning", desc: "Digital classrooms that bring concepts alive." },
-  { icon: HeartHandshake, title: "Experienced Faculty", desc: "Caring, dedicated teachers guiding each child's potential." },
-  { icon: Sparkles, title: "Holistic Development", desc: "Sports, arts, technology, and life skills for life readiness." },
-  { icon: ShieldCheck, title: "Strong Values & Discipline", desc: "Building character, integrity, and ethical conduct." },
-  { icon: Compass, title: "Beyond the Classroom", desc: "Hands-on projects, field visits, and community activities." },
+  {
+    icon: Calendar,
+    title: "Established in 1999",
+    desc: "Founded with the mission to provide accessible, value-rooted education.",
+  },
+  {
+    icon: Award,
+    title: "25 Years of Service",
+    desc: "A quarter century of dedicated educational contribution in Adugodi.",
+  },
+  {
+    icon: Users,
+    title: "Co-Educational Institution",
+    desc: "Inclusive and supportive environment for all young minds.",
+  },
+  {
+    icon: GraduationCap,
+    title: "State Board Curriculum",
+    desc: "Structured syllabus with strong conceptual foundations.",
+  },
+  {
+    icon: Laptop,
+    title: "Smart & Interactive Learning",
+    desc: "Digital classrooms that bring concepts alive.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Experienced Faculty",
+    desc: "Caring, dedicated teachers guiding each child's potential.",
+  },
+  {
+    icon: Sparkles,
+    title: "Holistic Development",
+    desc: "Sports, arts, technology, and life skills for life readiness.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Strong Values & Discipline",
+    desc: "Building character, integrity, and ethical conduct.",
+  },
+  {
+    icon: Compass,
+    title: "Beyond the Classroom",
+    desc: "Hands-on projects, field visits, and community activities.",
+  },
 ];
 
 export function HistoryTimeline() {
@@ -59,7 +95,11 @@ export function HistoryTimeline() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-muted-foreground text-lg leading-relaxed"
           >
-            The philosophy of Sai English High School is deeply connected to a tradition of service to education. Inspired by Late Patel Munichinappa and Late Patel Balappa, whose contribution of land supported education in Adugodi, the school continues that legacy by working to make meaningful education accessible to every child.
+            The philosophy of Sri Sai English High School is deeply connected to
+            a tradition of service to education. Inspired by Late Patel
+            Munichinappa and Late Patel Balappa, whose contribution of land
+            supported education in Adugodi, the school continues that legacy by
+            working to make meaningful education accessible to every child.
           </motion.p>
         </div>
 
@@ -81,11 +121,16 @@ export function HistoryTimeline() {
               Silver Jubilee of Growth & Values
             </h3>
             <p className="text-primary-foreground/90 text-base sm:text-lg leading-relaxed mb-6">
-              Sai English High School proudly marks 25 years of education, growth, values, and service to the community. This milestone reflects the trust of our parents, the dedication of our teachers, the support of our well-wishers, and the achievements of generations of students.
+              Sri Sai English High School proudly marks 25 years of education,
+              growth, values, and service to the community. This milestone
+              reflects the trust of our parents, the dedication of our teachers,
+              the support of our well-wishers, and the achievements of
+              generations of students.
             </p>
             <div className="inline-block bg-primary-foreground/15 backdrop-blur-md rounded-2xl px-6 py-3 border border-primary-foreground/20">
               <p className="font-serif text-base sm:text-lg font-semibold text-accent tracking-wide">
-                25 Years of Learning • 25 Years of Values • 25 Years of Growing Together
+                25 Years of Learning • 25 Years of Values • 25 Years of Growing
+                Together
               </p>
             </div>
           </div>

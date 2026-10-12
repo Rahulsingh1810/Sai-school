@@ -7,9 +7,9 @@ import { ActivitiesSection } from "@/components/about/activities";
 import { CTASection } from "@/components/home/cta-section";
 
 export const metadata: Metadata = {
-  title: "About Us | Sai English High School",
+  title: "About Us | Sri Sai English High School",
   description:
-    "Learn about Sai English High School's 25-year history, mission, vision, and leadership committed to quality education rooted in strong values and equal opportunity in Adugodi.",
+    "Learn about Sri Sai English High School's 25-year history, mission, vision, and leadership committed to quality education rooted in strong values and equal opportunity in Adugodi.",
 };
 
 export default function AboutPage() {
@@ -18,7 +18,7 @@ export default function AboutPage() {
       <PageHeader
         badge="Our Story & Philosophy"
         title="Built on a Promise, Not a Privilege"
-        description="For 25 years, Sai English High School has been shaping minds and nurturing character through quality education, holistic development, and service to society."
+        description="For 25 years, Sri Sai English High School has been shaping minds and nurturing character through quality education, holistic development, and service to society."
         backgroundImage="/commons/about-hero.JPG"
       />
       <ChairmanMessage />

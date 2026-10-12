@@ -134,61 +134,67 @@ export function ContactModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
-      <DialogContent className="sm:max-w-lg max-h-[92vh] overflow-y-auto rounded-3xl border-border/80 p-6 sm:p-8 shadow-2xl">
-        <DialogHeader className="text-left space-y-2">
+      <DialogContent
+        onOpenAutoFocus={(e) => {
+          // Prevent mobile keyboard from abruptly popping open when modal triggers automatically
+          e.preventDefault()
+        }}
+        className="p-4 sm:p-6 lg:p-7 max-w-[calc(100%-1.5rem)] sm:max-w-lg max-h-[88dvh] sm:max-h-[90vh] overflow-y-auto rounded-2xl sm:rounded-3xl border-border/80 shadow-2xl overscroll-contain"
+      >
+        <DialogHeader className="text-left space-y-1.5 sm:space-y-2 pr-6 sm:pr-8">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
-              <Sparkles className="w-3.5 h-3.5 text-accent" />
+            <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
+              <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-accent shrink-0" />
               Admissions Open 2026–27
             </span>
           </div>
 
-          <DialogTitle className="font-serif text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
+          <DialogTitle className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-foreground tracking-tight leading-snug">
             Connect with Sai English High School
           </DialogTitle>
 
-          <DialogDescription className="text-sm text-muted-foreground leading-relaxed">
-            Have questions about admissions, curriculum, or facilities? Leave
-            your details and our admissions team will contact you promptly.
+          <DialogDescription className="text-xs sm:text-sm text-muted-foreground leading-normal sm:leading-relaxed">
+            Have questions about admissions, curriculum, or facilities? Submit
+            your inquiry and our team will get in touch.
           </DialogDescription>
         </DialogHeader>
 
         {isSubmitted ? (
-          <div className="py-8 text-center space-y-4">
-            <div className="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-950/50 flex items-center justify-center mx-auto text-emerald-600">
-              <CheckCircle2 className="w-9 h-9" />
+          <div className="py-6 sm:py-8 text-center space-y-3 sm:space-y-4">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-100 dark:bg-emerald-950/50 flex items-center justify-center mx-auto text-emerald-600">
+              <CheckCircle2 className="w-8 h-8 sm:w-9 sm:h-9" />
             </div>
             <div className="space-y-1">
-              <h4 className="font-serif text-2xl font-bold text-foreground">
+              <h4 className="font-serif text-xl sm:text-2xl font-bold text-foreground">
                 Inquiry Received!
               </h4>
-              <p className="text-sm text-muted-foreground max-w-sm mx-auto">
-                Thank you for your interest in Sai English High School. Our team
-                will review your request and get back to you shortly.
+              <p className="text-xs sm:text-sm text-muted-foreground max-w-sm mx-auto leading-relaxed">
+                Thank you for reaching out. Our admissions coordinator will
+                review your inquiry and contact you shortly.
               </p>
             </div>
             <div className="pt-2">
               <Button
                 onClick={() => handleOpenChange(false)}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 rounded-xl shadow-md"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-7 sm:px-8 py-2.5 sm:py-3 rounded-xl shadow-md text-sm"
               >
                 Done
               </Button>
             </div>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-4 mt-2">
+          <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 mt-1 sm:mt-2">
             {error && (
-              <div className="p-3 bg-destructive/10 text-destructive text-sm rounded-xl border border-destructive/20 font-medium">
+              <div className="p-2.5 sm:p-3 bg-destructive/10 text-destructive text-xs sm:text-sm rounded-xl border border-destructive/20 font-medium">
                 {error}
               </div>
             )}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-2 sm:gap-3">
               <div>
                 <label
                   htmlFor="modal-firstName"
-                  className="block text-xs font-semibold text-foreground mb-1.5"
+                  className="block text-[11px] sm:text-xs font-semibold text-foreground mb-1"
                 >
                   First Name <span className="text-destructive">*</span>
                 </label>
@@ -196,15 +202,15 @@ export function ContactModal({
                   id="modal-firstName"
                   name="firstName"
                   required
-                  placeholder="Student / Parent name"
-                  className="rounded-xl h-10 text-sm"
+                  placeholder="First name"
+                  className="rounded-xl h-9 sm:h-10 text-base sm:text-sm px-2.5 sm:px-3"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="modal-lastName"
-                  className="block text-xs font-semibold text-foreground mb-1.5"
+                  className="block text-[11px] sm:text-xs font-semibold text-foreground mb-1"
                 >
                   Last Name <span className="text-destructive">*</span>
                 </label>
@@ -213,16 +219,16 @@ export function ContactModal({
                   name="lastName"
                   required
                   placeholder="Surname"
-                  className="rounded-xl h-10 text-sm"
+                  className="rounded-xl h-9 sm:h-10 text-base sm:text-sm px-2.5 sm:px-3"
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
               <div>
                 <label
                   htmlFor="modal-email"
-                  className="block text-xs font-semibold text-foreground mb-1.5"
+                  className="block text-[11px] sm:text-xs font-semibold text-foreground mb-1"
                 >
                   Email Address <span className="text-destructive">*</span>
                 </label>
@@ -232,14 +238,14 @@ export function ContactModal({
                   type="email"
                   required
                   placeholder="name@example.com"
-                  className="rounded-xl h-10 text-sm"
+                  className="rounded-xl h-9 sm:h-10 text-base sm:text-sm px-2.5 sm:px-3"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="modal-phone"
-                  className="block text-xs font-semibold text-foreground mb-1.5"
+                  className="block text-[11px] sm:text-xs font-semibold text-foreground mb-1"
                 >
                   Phone Number
                 </label>
@@ -248,7 +254,7 @@ export function ContactModal({
                   name="phone"
                   type="tel"
                   placeholder="e.g. 96635 26666"
-                  className="rounded-xl h-10 text-sm"
+                  className="rounded-xl h-9 sm:h-10 text-base sm:text-sm px-2.5 sm:px-3"
                 />
               </div>
             </div>
@@ -256,7 +262,7 @@ export function ContactModal({
             <div>
               <label
                 htmlFor="modal-subject"
-                className="block text-xs font-semibold text-foreground mb-1.5"
+                className="block text-[11px] sm:text-xs font-semibold text-foreground mb-1"
               >
                 Inquiry Topic <span className="text-destructive">*</span>
               </label>
@@ -265,7 +271,7 @@ export function ContactModal({
                 name="subject"
                 required
                 defaultValue="Admission Enquiries"
-                className="w-full h-10 px-3 rounded-xl border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                className="w-full h-9 sm:h-10 px-2.5 sm:px-3 rounded-xl border border-input bg-background text-foreground text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 {INQUIRY_OPTIONS.map((opt) => (
                   <option key={opt} value={opt}>
@@ -278,25 +284,25 @@ export function ContactModal({
             <div>
               <label
                 htmlFor="modal-message"
-                className="block text-xs font-semibold text-foreground mb-1.5"
+                className="block text-[11px] sm:text-xs font-semibold text-foreground mb-1"
               >
                 Message / Grade Interested In <span className="text-destructive">*</span>
               </label>
               <textarea
                 id="modal-message"
                 name="message"
-                rows={3}
+                rows={2}
                 required
-                placeholder="Mention the grade/class and any specific queries..."
-                className="w-full px-3 py-2 rounded-xl border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+                placeholder="Grade interested in or your questions..."
+                className="w-full px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl border border-input bg-background text-foreground text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-none"
               />
             </div>
 
-            <div className="pt-2">
+            <div className="pt-1 sm:pt-2">
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-5 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl text-sm shadow-md transition-all flex items-center justify-center gap-2"
+                className="w-full py-2.5 sm:py-3 h-auto bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl text-sm sm:text-base shadow-md transition-all flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>
@@ -312,16 +318,16 @@ export function ContactModal({
               </Button>
             </div>
 
-            <div className="flex items-center justify-between pt-1 text-[11px] text-muted-foreground border-t border-border/50">
-              <span className="flex items-center gap-1">
-                <GraduationCap className="w-3.5 h-3.5 text-primary" />
+            <div className="flex items-center justify-between pt-1.5 text-[10px] sm:text-xs text-muted-foreground border-t border-border/50">
+              <span className="flex items-center gap-1 font-medium">
+                <GraduationCap className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary shrink-0" />
                 Pre-Primary to Class X
               </span>
               <a
                 href="tel:+919663526666"
-                className="hover:text-primary transition-colors flex items-center gap-1 font-medium"
+                className="hover:text-primary transition-colors flex items-center gap-1 font-semibold text-foreground"
               >
-                <Phone className="w-3 h-3 text-accent" />
+                <Phone className="w-3 h-3 text-accent shrink-0" />
                 +91 96635 26666
               </a>
             </div>

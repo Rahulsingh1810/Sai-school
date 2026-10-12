@@ -4,9 +4,9 @@ import { FacilitiesSection } from "@/components/academics/facilities-section";
 import { CTASection } from "@/components/home/cta-section";
 
 export const metadata: Metadata = {
-  title: "Facilities | Sai English High School",
+  title: "Facilities | Sri Sai English High School",
   description:
-    "Explore our well-equipped campus facilities including modern classrooms, smart classes, science laboratories, library & resource centre, computer centre, and sports facilities at Sai English High School in Adugodi.",
+    "Explore our well-equipped campus facilities including modern classrooms, smart classes, science laboratories, library & resource centre, computer centre, and sports facilities at Sri Sai English High School in Adugodi.",
 };
 
 export default function FacilitiesPage() {
@@ -15,7 +15,7 @@ export default function FacilitiesPage() {
       <PageHeader
         badge="Our Campus"
         title="World-Class Learning Environment"
-        description="Sai English High School provides a supportive and well-equipped learning environment designed to encourage academic excellence, creativity, and holistic development."
+        description="Sri Sai English High School provides a supportive and well-equipped learning environment designed to encourage academic excellence, creativity, and holistic development."
         backgroundImage="/new images/facilities-hero.webp"
         imagePosition="object-top"
       />

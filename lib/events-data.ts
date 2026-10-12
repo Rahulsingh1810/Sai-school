@@ -1,10 +1,14 @@
-import type { Event, EventPhoto } from "@/components/gallery/events-gallery"
+import type { Event, EventPhoto } from "@/components/gallery/events-gallery";
 
-function generatePhotos(folder: string, count: number, eventTitle: string): EventPhoto[] {
+function generatePhotos(
+  folder: string,
+  count: number,
+  eventTitle: string,
+): EventPhoto[] {
   return Array.from({ length: count }, (_, i) => ({
     src: `/events/${folder}/${i + 1}.jpg`,
     title: `${eventTitle} - Photo ${i + 1}`,
-  }))
+  }));
 }
 
 export const SCHOOL_EVENTS: Event[] = [
@@ -13,7 +17,7 @@ export const SCHOOL_EVENTS: Event[] = [
     title: "Annual Sports Day 2026",
     date: "February 20, 2026",
     time: "9:00 AM - 3:30 PM",
-    location: "Sai English High School Grounds",
+    location: "Sri Sai English High School Grounds",
     category: "Sports",
     image: "/events/sportsday-2026/1.jpg",
     description:
@@ -25,19 +29,23 @@ export const SCHOOL_EVENTS: Event[] = [
     title: "Independence Day Celebration",
     date: "August 15, 2026",
     time: "8:00 AM - 11:30 AM",
-    location: "Sai English High School Campus",
+    location: "Sri Sai English High School Campus",
     category: "Cultural",
     image: "/events/independence-day/1.jpg",
     description:
       "Honoring India's freedom with patriotic pride through tricolor flag hoisting, national anthem, ceremonial drills, and heartfelt student performances.",
-    photos: generatePhotos("independence-day", 11, "Independence Day Celebration"),
+    photos: generatePhotos(
+      "independence-day",
+      11,
+      "Independence Day Celebration",
+    ),
   },
   {
     id: 3,
     title: "Rajathakalothsava",
     date: "December 2025",
     time: "9:30 AM - 1:00 PM",
-    location: "Sai English High School Campus",
+    location: "Sri Sai English High School Campus",
     category: "Cultural",
     image: "/events/raj/1.jpg",
     description:
@@ -49,7 +57,7 @@ export const SCHOOL_EVENTS: Event[] = [
     title: "Republic Day Celebration",
     date: "January 26, 2026",
     time: "8:30 AM - 11:00 AM",
-    location: "Sai English High School Campus",
+    location: "Sri Sai English High School Campus",
     category: "Cultural",
     image: "/events/republic-day/1.jpg",
     description:
@@ -61,7 +69,7 @@ export const SCHOOL_EVENTS: Event[] = [
     title: "International Yoga Day",
     date: "June 21, 2026",
     time: "7:30 AM - 9:30 AM",
-    location: "Sai English High School Grounds",
+    location: "Sri Sai English High School Grounds",
     category: "Sports",
     image: "/events/yoga-day/1.jpg",
     description:
@@ -73,7 +81,7 @@ export const SCHOOL_EVENTS: Event[] = [
     title: "Saraswati Puja Celebration",
     date: "February 14, 2026",
     time: "9:00 AM - 12:30 PM",
-    location: "Sai English High School Campus",
+    location: "Sri Sai English High School Campus",
     category: "Cultural",
     image: "/events/saraswati-puja/1.jpg",
     description:
@@ -85,7 +93,7 @@ export const SCHOOL_EVENTS: Event[] = [
     title: "World Environment Day",
     date: "June 5, 2026",
     time: "8:30 AM - 12:00 PM",
-    location: "Sai English High School Campus",
+    location: "Sri Sai English High School Campus",
     category: "Academic",
     image: "/events/environment-day/1.jpg",
     description:
@@ -97,11 +105,11 @@ export const SCHOOL_EVENTS: Event[] = [
     title: "Echoes of the Past",
     date: "October 2025",
     time: "10:00 AM - 2:00 PM",
-    location: "Sai English High School Campus",
+    location: "Sri Sai English High School Campus",
     category: "Cultural",
     image: "/events/echoes-of-the-past/1.jpg",
     description:
-      "A nostalgic glimpse into the cherished history, unforgettable milestones, and heritage memories of Sai English High School.",
+      "A nostalgic glimpse into the cherished history, unforgettable milestones, and heritage memories of Sri Sai English High School.",
     photos: generatePhotos("echoes-of-the-past", 10, "Echoes of the Past"),
   },
-]
+];

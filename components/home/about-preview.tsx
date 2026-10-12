@@ -121,7 +121,7 @@ export function AboutPreview() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-border/50">
               <Image
                 src="/commons/about.JPG"
-                alt="Students at Sai English High School"
+                alt="Students at Sri Sai English High School"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -140,14 +140,14 @@ export function AboutPreview() {
             className="lg:col-span-7"
           >
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
-              About Sai English High School
+              About Sri Sai English High School
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight text-balance">
               Built on a Promise, Not a Privilege
             </h2>
             <p className="text-foreground/90 text-lg leading-relaxed mb-4 font-medium">
-              <strong>Sai English High School</strong>, established in 1999, is
-              a co-educational institution committed to providing quality
+              <strong>Sri Sai English High School</strong>, established in 1999,
+              is a co-educational institution committed to providing quality
               education rooted in strong values, equal opportunity, and service
               to society.
             </p>
@@ -158,11 +158,11 @@ export function AboutPreview() {
               of background or privilege.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              At Sai English High School, we focus on the overall development of
-              every student. Along with academics, we encourage creativity,
-              discipline, confidence, sports, technology, cultural activities,
-              and life skills so that students are prepared not only for
-              examinations, but for life.
+              At Sri Sai English High School, we focus on the overall
+              development of every student. Along with academics, we encourage
+              creativity, discipline, confidence, sports, technology, cultural
+              activities, and life skills so that students are prepared not only
+              for examinations, but for life.
             </p>
 
             {/* Quote Callout */}
@@ -205,7 +205,7 @@ export function AboutPreview() {
               What Defines Our Education
             </h3>
             <p className="text-muted-foreground text-sm sm:text-base mt-2">
-              Discover the pillars that empower every student at Sai English
+              Discover the pillars that empower every student at Sri Sai English
               High School
             </p>
           </div>

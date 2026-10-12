@@ -83,7 +83,6 @@ export function AcademicPrograms() {
   return (
     <section className="py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
-        
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span
@@ -111,7 +110,9 @@ export function AcademicPrograms() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-muted-foreground text-base sm:text-lg leading-relaxed"
           >
-            Our carefully structured learning progression ensures each child transitions smoothly through key developmental and academic milestones.
+            Our carefully structured learning progression ensures each child
+            transitions smoothly through key developmental and academic
+            milestones.
           </motion.p>
         </div>
 
@@ -190,13 +191,14 @@ export function AcademicPrograms() {
         >
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="inline-block px-4 py-1.5 bg-accent/20 text-accent text-sm font-semibold rounded-full mb-3">
-              Join Sai English High School
+              Join Sri Sai English High School
             </span>
             <h3 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-4">
               Admissions & Age Eligibility
             </h3>
             <p className="text-muted-foreground text-sm sm:text-base">
-              Please review the age criteria and academic schedule for incoming admissions.
+              Please review the age criteria and academic schedule for incoming
+              admissions.
             </p>
           </div>
 
@@ -210,7 +212,9 @@ export function AcademicPrograms() {
                 <h4 className="font-serif text-lg font-bold text-foreground mb-1">
                   {item.grade}
                 </h4>
-                <p className="text-accent font-semibold text-base">{item.age}</p>
+                <p className="text-accent font-semibold text-base">
+                  {item.age}
+                </p>
               </div>
             ))}
           </div>
@@ -223,8 +227,10 @@ export function AcademicPrograms() {
                   Age Cut-Off & Commencement
                 </h5>
                 <p className="text-muted-foreground text-xs sm:text-sm mt-1">
-                  • Age to be completed by <strong>1 June</strong> of the admission year.<br />
-                  • <strong>Term 1</strong> commences during the last week of May or the first week of June.
+                  • Age to be completed by <strong>1 June</strong> of the
+                  admission year.
+                  <br />• <strong>Term 1</strong> commences during the last week
+                  of May or the first week of June.
                 </p>
               </div>
             </div>
@@ -238,7 +244,6 @@ export function AcademicPrograms() {
             </div>
           </div>
         </motion.div>
-
       </div>
     </section>
   );

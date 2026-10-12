@@ -20,7 +20,7 @@ const contactCards = [
     icon: MapPin,
     title: "School Address",
     details: [
-      "Sai English High School",
+      "Sri Sai English High School",
       "No. 7, II Main Road",
       "Adugodi, Bangalore – 560030",
     ],
@@ -89,12 +89,12 @@ export function ContactForm() {
         setIsSubmitted(true);
       } else {
         setError(
-          result.message || "Something went wrong. Please try again later."
+          result.message || "Something went wrong. Please try again later.",
         );
       }
     } catch {
       setError(
-        "Failed to send the message. Please check your network connection and try again."
+        "Failed to send the message. Please check your network connection and try again.",
       );
     } finally {
       setIsSubmitting(false);
@@ -117,7 +117,7 @@ export function ContactForm() {
               Get in Touch
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Connect with Sai English High School
+              Connect with Sri Sai English High School
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
               We welcome enquiries from parents, students, and well-wishers. For
@@ -311,13 +311,27 @@ export function ContactForm() {
                       className="w-full h-11 px-3 rounded-xl border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                     >
                       <option value="">Select an Inquiry Type</option>
-                      <option value="Admission Enquiries">Admission Enquiries</option>
-                      <option value="Academic Information">Academic Information</option>
-                      <option value="Curriculum Details">Curriculum Details</option>
-                      <option value="School Facilities">School Facilities</option>
-                      <option value="Fee and Application Information">Fee & Application Information</option>
-                      <option value="Campus Visit">Schedule a Campus Visit</option>
-                      <option value="General School Enquiries">General School Enquiries</option>
+                      <option value="Admission Enquiries">
+                        Admission Enquiries
+                      </option>
+                      <option value="Academic Information">
+                        Academic Information
+                      </option>
+                      <option value="Curriculum Details">
+                        Curriculum Details
+                      </option>
+                      <option value="School Facilities">
+                        School Facilities
+                      </option>
+                      <option value="Fee and Application Information">
+                        Fee & Application Information
+                      </option>
+                      <option value="Campus Visit">
+                        Schedule a Campus Visit
+                      </option>
+                      <option value="General School Enquiries">
+                        General School Enquiries
+                      </option>
                     </select>
                   </div>
 

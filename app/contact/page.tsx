@@ -5,9 +5,9 @@ import { MapSection } from "@/components/contact/map-section";
 import { FAQSection } from "@/components/contact/faq-section";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Sai English High School",
+  title: "Contact Us | Sri Sai English High School",
   description:
-    "Get in touch with Sai English High School in Adugodi, Bangalore. Contact us for admissions inquiries, curriculum details, or campus visits.",
+    "Get in touch with Sri Sai English High School in Adugodi, Bangalore. Contact us for admissions inquiries, curriculum details, or campus visits.",
 };
 
 export default function ContactPage() {
@@ -15,7 +15,7 @@ export default function ContactPage() {
     <>
       <PageHeader
         badge="Contact Us"
-        title="Connect with Sai English High School"
+        title="Connect with Sri Sai English High School"
         description="We welcome enquiries from parents, students, and well-wishers regarding admissions, academics, and school facilities."
         backgroundImage="/commons/about.JPG"
         imagePosition=""

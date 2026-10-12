@@ -16,40 +16,41 @@ const openSans = Open_Sans({
   variable: "--font-open-sans",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.saienglishhighschool.com";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.saienglishhighschool.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Sai English High School | Nurturing Future Leaders",
-    template: "%s | Sai English High School",
+    default: "Sri Sai English High School | Nurturing Future Leaders",
+    template: "%s | Sri Sai English High School",
   },
   description:
-    "Sai English High School in Adugodi, Bangalore is an educational institution committed to providing quality education and nurturing future leaders through academic excellence and holistic development.",
+    "Sri Sai English High School in Adugodi, Bangalore is an educational institution committed to providing quality education and nurturing future leaders through academic excellence and holistic development.",
   keywords: [
-    "Sai English High School",
-    "Sai English High School Bangalore",
-    "Sai English High School Adugodi",
+    "Sri Sai English High School",
+    "Sri Sai English High School Bangalore",
+    "Sri Sai English High School Adugodi",
     "schools in Adugodi",
     "State Board schools Bangalore",
     "quality education Bangalore",
-    "holistic development school"
+    "holistic development school",
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Sai English High School | Nurturing Future Leaders",
+    title: "Sri Sai English High School | Nurturing Future Leaders",
     description:
-      "Sai English High School in Adugodi, Bangalore is committed to providing quality education and nurturing future leaders.",
+      "Sri Sai English High School in Adugodi, Bangalore is committed to providing quality education and nurturing future leaders.",
     url: siteUrl,
-    siteName: "Sai English High School",
+    siteName: "Sri Sai English High School",
     images: [
       {
         url: "/logo.png",
         width: 1167,
         height: 1145,
-        alt: "Sai English High School Logo",
+        alt: "Sri Sai English High School Logo",
       },
     ],
     locale: "en_US",
@@ -60,9 +61,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sai English High School | Nurturing Future Leaders",
+    title: "Sri Sai English High School | Nurturing Future Leaders",
     description:
-      "Sai English High School in Adugodi, Bangalore is committed to providing quality education and nurturing future leaders.",
+      "Sri Sai English High School in Adugodi, Bangalore is committed to providing quality education and nurturing future leaders.",
     images: ["/logo.png"],
   },
   robots: {

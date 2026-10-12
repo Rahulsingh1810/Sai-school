@@ -11,9 +11,9 @@ import {
 
 const faqs = [
   {
-    question: "What curriculum does Sai English High School follow?",
+    question: "What curriculum does Sri Sai English High School follow?",
     answer:
-      "Sai English High School follows the State Board Curriculum with an enriched focus on interactive smart learning, foundational concepts, and preparation for higher education.",
+      "Sri Sai English High School follows the State Board Curriculum with an enriched focus on interactive smart learning, foundational concepts, and preparation for higher education.",
   },
   {
     question: "What are the age eligibility criteria for admission?",

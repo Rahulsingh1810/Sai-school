@@ -1,22 +1,26 @@
-import { NextRequest, NextResponse } from "next/server"
-import nodemailer from "nodemailer"
+import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest) {
   try {
-    const { firstName, lastName, email, phone, subject, message } = await request.json()
+    const { firstName, lastName, email, phone, subject, message } =
+      await request.json();
 
     // Validate required fields
     if (!firstName || !lastName || !email || !subject || !message) {
       return NextResponse.json(
         { success: false, message: "Missing required fields." },
-        { status: 400 }
-      )
+        { status: 400 },
+      );
     }
 
     // Configure the mail transporter
-    const smtpUser = process.env.SMTP_USER || process.env.EMAIL
-    const smtpPass = process.env.SMTP_PASS || process.env.EMAIL_PASSWORD
-    const recipient = process.env.CONTACT_EMAIL_TO || process.env.RECIPIENT_EMAIL || "srisaiselhs2000@gmail.com"
+    const smtpUser = process.env.SMTP_USER || process.env.EMAIL;
+    const smtpPass = process.env.SMTP_PASS || process.env.EMAIL_PASSWORD;
+    const recipient =
+      process.env.CONTACT_EMAIL_TO ||
+      process.env.RECIPIENT_EMAIL ||
+      "srisaiselhs2000@gmail.com";
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || "smtp.gmail.com",
@@ -26,7 +30,7 @@ export async function POST(request: NextRequest) {
         user: smtpUser,
         pass: smtpPass,
       },
-    })
+    });
 
     // Prepare human-readable subject display
     const subjectsMap: { [key: string]: string } = {
@@ -35,8 +39,8 @@ export async function POST(request: NextRequest) {
       visit: "Schedule a Visit",
       feedback: "Feedback",
       other: "Other Inquiry",
-    }
-    const displaySubject = subjectsMap[subject] || subject
+    };
+    const displaySubject = subjectsMap[subject] || subject;
 
     const mailOptions = {
       from: `"${firstName} ${lastName}" <${smtpUser}>`,
@@ -44,7 +48,7 @@ export async function POST(request: NextRequest) {
       replyTo: email,
       subject: `New SEHS Website Inquiry: ${displaySubject} - ${firstName} ${lastName}`,
       text: `
-Sai English High School - New Inquiry
+Sri Sai English High School - New Inquiry
 
 Name: ${firstName} ${lastName}
 Email: ${email}
@@ -67,7 +71,7 @@ ${message}
             
             <!-- Header (School brand deep color) -->
             <div style="background-color: #0f172a; padding: 32px 40px; text-align: center;">
-              <h1 style="color: #ffffff; font-family: 'Merriweather', Georgia, serif; font-size: 24px; font-weight: 700; margin: 0; letter-spacing: 0.5px;">Sai English High School</h1>
+              <h1 style="color: #ffffff; font-family: 'Merriweather', Georgia, serif; font-size: 24px; font-weight: 700; margin: 0; letter-spacing: 0.5px;">Sri Sai English High School</h1>
               <p style="color: #94a3b8; font-size: 14px; margin: 8px 0 0 0; font-weight: 500;">Online Contact Form Inquiry</p>
             </div>
 
@@ -105,23 +109,30 @@ ${message}
 
             <!-- Footer (School details matching theme) -->
             <div style="background-color: #f1f5f9; padding: 28px 40px; text-align: center; font-size: 12px; color: #64748b; border-top: 1px solid #e2e8f0;">
-              <p style="margin: 0 0 6px 0;">This email was automatically generated and sent from the Sai English High School website portal.</p>
-              <p style="margin: 0; font-weight: 500;">&copy; ${new Date().getFullYear()} Sai English High School. All rights reserved.</p>
+              <p style="margin: 0 0 6px 0;">This email was automatically generated and sent from the Sri Sai English High School website portal.</p>
+              <p style="margin: 0; font-weight: 500;">&copy; ${new Date().getFullYear()} Sri Sai English High School. All rights reserved.</p>
             </div>
           </div>
         </body>
         </html>
       `,
-    }
+    };
 
-    await transporter.sendMail(mailOptions)
+    await transporter.sendMail(mailOptions);
 
-    return NextResponse.json({ success: true, message: "Email sent successfully!" })
+    return NextResponse.json({
+      success: true,
+      message: "Email sent successfully!",
+    });
   } catch (error: any) {
-    console.error("Error in contact API:", error)
+    console.error("Error in contact API:", error);
     return NextResponse.json(
-      { success: false, message: "Failed to send email.", error: error.message },
-      { status: 500 }
-    )
+      {
+        success: false,
+        message: "Failed to send email.",
+        error: error.message,
+      },
+      { status: 500 },
+    );
   }
 }

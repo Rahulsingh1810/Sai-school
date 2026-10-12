@@ -7,7 +7,7 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Sai English High School has been instrumental in shaping my child's future. The dedicated faculty and value-based curriculum have exceeded our expectations.",
+      "Sri Sai English High School has been instrumental in shaping my child's future. The dedicated faculty and value-based curriculum have exceeded our expectations.",
     name: "Sarah Johnson",
     role: "Parent of Grade 10 Student",
     image:
@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     quote:
-      "The holistic approach to education at Sai English High School prepared me not just academically, but for life. I'm grateful for the values and friendships formed here.",
+      "The holistic approach to education at Sri Sai English High School prepared me not just academically, but for life. I'm grateful for the values and friendships formed here.",
     name: "Michael Chen",
     role: "Alumni",
     image:
@@ -23,7 +23,7 @@ const testimonials = [
   },
   {
     quote:
-      "As an educator, I can confidently say that Sai English High School provides an inspiring learning environment where every student can thrive and discover their unique potential.",
+      "As an educator, I can confidently say that Sri Sai English High School provides an inspiring learning environment where every student can thrive and discover their unique potential.",
     name: "Dr. Emily Roberts",
     role: "Senior Faculty Member",
     image:

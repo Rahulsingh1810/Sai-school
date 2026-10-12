@@ -23,7 +23,7 @@ export function ChairmanMessage() {
               <div className="relative aspect-[1179/708] w-full overflow-hidden">
                 <Image
                   src="/commons/chairman.JPG"
-                  alt="Secretary C. Sathyanarayana - Sai English High School"
+                  alt="Secretary C. Sathyanarayana - Sri Sai English High School"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 42vw"
@@ -41,7 +41,7 @@ export function ChairmanMessage() {
                       Secretary
                     </p>
                     <p className="text-muted-foreground text-xs font-medium mt-0.5">
-                      Sai English High School
+                      Sri Sai English High School
                     </p>
                   </div>
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 shrink-0">
@@ -78,9 +78,9 @@ export function ChairmanMessage() {
               <Quote className="w-12 h-12 text-accent/25 absolute -top-3 -left-4" />
               <div className="relative z-10 space-y-4 text-muted-foreground leading-relaxed pl-4 border-l-4 border-accent text-base sm:text-lg">
                 <p>
-                  <strong>Sai English High School</strong>, established in 1999,
-                  was founded on a simple but enduring belief: that quality
-                  education should be within the reach of every child,
+                  <strong>Sri Sai English High School</strong>, established in
+                  1999, was founded on a simple but enduring belief: that
+                  quality education should be within the reach of every child,
                   irrespective of background, circumstance, or privilege.
                 </p>
 
@@ -102,16 +102,18 @@ export function ChairmanMessage() {
                 </p>
 
                 <p>
-                  Sai English High School was founded as a service to society, so
-                  that children from all walks of life could receive meaningful
-                  education, guidance, and the chance to build a better future.
+                  Sri Sai English High School was founded as a service to
+                  society, so that children from all walks of life could receive
+                  meaningful education, guidance, and the chance to build a
+                  better future.
                 </p>
 
                 <p>
-                  We have always believed that education must never be defined by
-                  privilege. Whether a child comes from a wealthy family or a
+                  We have always believed that education must never be defined
+                  by privilege. Whether a child comes from a wealthy family or a
                   modest background, every student deserves the same dignity,
-                  encouragement, and opportunity to realise his or her potential.
+                  encouragement, and opportunity to realise his or her
+                  potential.
                 </p>
 
                 <p>
@@ -126,8 +128,8 @@ export function ChairmanMessage() {
                 </p>
 
                 <p>
-                  Over the years, this school has grown through the dedication of
-                  our teachers, the trust of our parents, the support of our
+                  Over the years, this school has grown through the dedication
+                  of our teachers, the trust of our parents, the support of our
                   well-wishers, and the aspirations of generations of students.
                   We look back with gratitude. While education and society
                   continue to evolve, the principle on which the school was
@@ -138,15 +140,15 @@ export function ChairmanMessage() {
                 <p>
                   As Secretary, it is both a privilege and a responsibility to
                   carry forward the legacy and values of those who came before
-                  us. My aspiration is that Sai English High School will always
-                  be a place where every child is valued, every talent is
+                  us. My aspiration is that Sri Sai English High School will
+                  always be a place where every child is valued, every talent is
                   encouraged, and every student can learn, grow, and succeed.
                 </p>
 
                 <p className="text-foreground font-medium italic">
-                  We move forward with renewed commitment to the generations
-                  yet to come, true to our founding purpose: to educate, to
-                  empower, and to serve.
+                  We move forward with renewed commitment to the generations yet
+                  to come, true to our founding purpose: to educate, to empower,
+                  and to serve.
                 </p>
               </div>
             </div>
@@ -157,7 +159,7 @@ export function ChairmanMessage() {
               </p>
               <p className="text-accent font-semibold text-sm">Secretary</p>
               <p className="text-muted-foreground text-xs mt-0.5">
-                Sai English High School
+                Sri Sai English High School
               </p>
             </div>
           </motion.div>

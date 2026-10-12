@@ -34,7 +34,7 @@ export function CTASection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6 text-balance"
           >
-            Begin Your Child&apos;s Journey With Sai English High School
+            Begin Your Child&apos;s Journey With Sri Sai English High School
           </motion.h2>
           <motion.p
             initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}
@@ -43,7 +43,9 @@ export function CTASection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-primary-foreground/85 text-base sm:text-lg leading-relaxed mb-10"
           >
-            Join a community rooted in equal opportunity, strong moral values, and 25 years of educational service in Adugodi. Let us help your child discover and nurture their unique potential.
+            Join a community rooted in equal opportunity, strong moral values,
+            and 25 years of educational service in Adugodi. Let us help your
+            child discover and nurture their unique potential.
           </motion.p>
           <motion.div
             initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}

@@ -62,10 +62,11 @@ export function FeaturesSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-muted-foreground text-base sm:text-lg leading-relaxed"
           >
-            At Sai English High School, we focus on the overall development of every student.
-            Along with academics, we encourage creativity, discipline, confidence, sports,
-            technology, cultural activities, and life skills so that students are prepared
-            to succeed with character and purpose.
+            At Sri Sai English High School, we focus on the overall development
+            of every student. Along with academics, we encourage creativity,
+            discipline, confidence, sports, technology, cultural activities, and
+            life skills so that students are prepared to succeed with character
+            and purpose.
           </motion.p>
         </div>
 
