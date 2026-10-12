@@ -17,26 +17,40 @@ export function ChairmanMessage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-5 relative"
+            className="lg:col-span-5 relative lg:sticky lg:top-28"
           >
-            <div className="relative aspect-[3/4] max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl border border-border">
-              <Image
-                src="/commons/chairman.JPG"
-                alt="Secretary C. Sathyanarayana - Sai English High School"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 text-white">
-                <h3 className="font-serif text-2xl font-bold">
-                  C. Sathyanarayana
-                </h3>
-                <p className="text-white/85 text-sm font-medium">Secretary</p>
-                <p className="text-accent text-xs font-semibold uppercase tracking-wider mt-1">
-                  Sai English High School
-                </p>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-card">
+              <div className="relative aspect-[1179/708] w-full overflow-hidden">
+                <Image
+                  src="/commons/chairman.JPG"
+                  alt="Secretary C. Sathyanarayana - Sai English High School"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="object-cover object-center"
+                />
+              </div>
+
+              <div className="p-5 sm:p-6 bg-card border-t border-border">
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-foreground">
+                      C. Sathyanarayana
+                    </h3>
+                    <p className="text-primary font-semibold text-sm mt-0.5">
+                      Secretary
+                    </p>
+                    <p className="text-muted-foreground text-xs font-medium mt-0.5">
+                      Sai English High School
+                    </p>
+                  </div>
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 shrink-0">
+                    Est. 1999
+                  </span>
+                </div>
               </div>
             </div>
+
             {/* Decorative Elements */}
             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent rounded-2xl -z-10 blur-xl opacity-60" />
             <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/20 rounded-2xl -z-10 blur-lg" />

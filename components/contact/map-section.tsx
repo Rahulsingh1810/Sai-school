@@ -64,18 +64,18 @@ export function MapSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="relative aspect-[16/9] lg:aspect-[21/9] max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-xl border border-border/60"
+          className="relative w-full h-[380px] sm:h-[450px] lg:h-[500px] max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-border/70"
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.358210344445!2d77.60523277436577!3d12.948911515372487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15cd8b022ad9%3A0xe54b9f29ce2697b0!2sSai%20English%20High%20School!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.4441298020024!2d77.6068511!3d12.943407899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15b571457ee7%3A0xcfc7286dad4d554!2sSri%20Sai%20English%20High%20School!5e0!3m2!1sen!2sin!4v1791787055117!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Sai English High School Location Adugodi"
-            className="absolute inset-0"
+            referrerPolicy="strict-origin-when-cross-origin"
+            title="Sri Sai English High School Location Adugodi"
+            className="w-full h-full"
           />
         </motion.div>
       </div>

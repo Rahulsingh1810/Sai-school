@@ -45,7 +45,7 @@ export function Footer() {
                 <span className="font-serif text-lg sm:text-xl font-bold tracking-tight text-white leading-none">
                   Sai English
                 </span>
-                <span className="text-[10px] sm:text-xs text-primary-foreground/75 font-semibold tracking-wider uppercase mt-1">
+                <span className="font-serif text-lg sm:text-xl font-bold tracking-tight text-white leading-none mt-0.5">
                   High School
                 </span>
               </div>

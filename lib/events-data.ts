@@ -13,7 +13,7 @@ export const SCHOOL_EVENTS: Event[] = [
     title: "Annual Sports Day 2026",
     date: "February 20, 2026",
     time: "9:00 AM - 3:30 PM",
-    location: "Heritage Public School Grounds",
+    location: "Sai English High School Grounds",
     category: "Sports",
     image: "/events/sportsday-2026/1.jpg",
     description:
@@ -25,7 +25,7 @@ export const SCHOOL_EVENTS: Event[] = [
     title: "Independence Day Celebration",
     date: "August 15, 2026",
     time: "8:00 AM - 11:30 AM",
-    location: "Heritage Public School Campus",
+    location: "Sai English High School Campus",
     category: "Cultural",
     image: "/events/independence-day/1.jpg",
     description:
@@ -34,22 +34,22 @@ export const SCHOOL_EVENTS: Event[] = [
   },
   {
     id: 3,
-    title: "Karnataka Rajyotsava",
-    date: "November 1, 2026",
+    title: "Rajathakalothsava",
+    date: "December 2025",
     time: "9:30 AM - 1:00 PM",
-    location: "Heritage Public School Campus",
+    location: "Sai English High School Campus",
     category: "Cultural",
     image: "/events/raj/1.jpg",
     description:
-      "A joyful celebration of Karnataka's vibrant heritage, traditions, and Kannada language, highlighted by folk dance, drama, and cultural pageantry.",
-    photos: generatePhotos("raj", 14, "Karnataka Rajyotsava"),
+      "A grand Silver Jubilee cultural festival celebrating 25 years of excellence with vibrant music, dance, theatrical performances, and student honours.",
+    photos: generatePhotos("raj", 20, "Rajathakalothsava"),
   },
   {
     id: 4,
     title: "Republic Day Celebration",
     date: "January 26, 2026",
     time: "8:30 AM - 11:00 AM",
-    location: "Heritage Public School Campus",
+    location: "Sai English High School Campus",
     category: "Cultural",
     image: "/events/republic-day/1.jpg",
     description:
@@ -61,7 +61,7 @@ export const SCHOOL_EVENTS: Event[] = [
     title: "International Yoga Day",
     date: "June 21, 2026",
     time: "7:30 AM - 9:30 AM",
-    location: "Heritage Public School Grounds",
+    location: "Sai English High School Grounds",
     category: "Sports",
     image: "/events/yoga-day/1.jpg",
     description:
@@ -73,7 +73,7 @@ export const SCHOOL_EVENTS: Event[] = [
     title: "Saraswati Puja Celebration",
     date: "February 14, 2026",
     time: "9:00 AM - 12:30 PM",
-    location: "Heritage Public School Campus",
+    location: "Sai English High School Campus",
     category: "Cultural",
     image: "/events/saraswati-puja/1.jpg",
     description:
@@ -85,11 +85,23 @@ export const SCHOOL_EVENTS: Event[] = [
     title: "World Environment Day",
     date: "June 5, 2026",
     time: "8:30 AM - 12:00 PM",
-    location: "Heritage Public School Campus",
+    location: "Sai English High School Campus",
     category: "Academic",
     image: "/events/environment-day/1.jpg",
     description:
       "Inspiring environmental stewardship and green awareness with campus tree plantation drives, eco-friendly exhibits, and conservation pledges.",
     photos: generatePhotos("environment-day", 6, "World Environment Day"),
+  },
+  {
+    id: 8,
+    title: "Echoes of the Past",
+    date: "October 2025",
+    time: "10:00 AM - 2:00 PM",
+    location: "Sai English High School Campus",
+    category: "Cultural",
+    image: "/events/echoes-of-the-past/1.jpg",
+    description:
+      "A nostalgic glimpse into the cherished history, unforgettable milestones, and heritage memories of Sai English High School.",
+    photos: generatePhotos("echoes-of-the-past", 10, "Echoes of the Past"),
   },
 ]

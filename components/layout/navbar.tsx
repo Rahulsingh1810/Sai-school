@@ -84,10 +84,8 @@ export function Navbar() {
 
               <span
                 className={cn(
-                  "text-[10px] sm:text-xs font-semibold tracking-wider uppercase mt-1 transition-colors",
-                  isTransparent
-                    ? "text-white/85"
-                    : "text-muted-foreground"
+                  "font-serif text-lg sm:text-xl font-bold tracking-tight leading-none transition-colors mt-0.5",
+                  isTransparent ? "text-white" : "text-primary"
                 )}
               >
                 High School
