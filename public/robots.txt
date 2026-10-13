@@ -1,0 +1,13 @@
+# Robots.txt for Sri Sai English High School
+# Website: https://srisaienglishhighschool.in
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+Sitemap: https://srisaienglishhighschool.in/sitemap.xml
+Host: https://srisaienglishhighschool.in

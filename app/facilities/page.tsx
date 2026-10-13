@@ -4,9 +4,27 @@ import { FacilitiesSection } from "@/components/academics/facilities-section";
 import { CTASection } from "@/components/home/cta-section";
 
 export const metadata: Metadata = {
-  title: "Facilities | Sri Sai English High School",
+  title: "Campus & Facilities - Modern Classrooms, Science & Computer Labs",
   description:
-    "Explore our well-equipped campus facilities including modern classrooms, smart classes, science laboratories, library & resource centre, computer centre, and sports facilities at Sri Sai English High School in Adugodi.",
+    "Explore campus facilities at Sri Sai English High School in Adugodi, Bangalore: smart digital classrooms, advanced science lab, computer centre, library & resource centre, and sports activities.",
+  keywords: [
+    "school facilities Adugodi",
+    "smart classrooms school Bangalore",
+    "computer lab school Bangalore",
+    "science lab school Adugodi",
+    "school library Adugodi Bangalore",
+    "Sri Sai School campus amenities",
+  ],
+  alternates: {
+    canonical: "https://srisaienglishhighschool.in/facilities",
+  },
+  openGraph: {
+    title: "Campus & Facilities | Sri Sai English High School",
+    description:
+      "World-class supportive learning environment with digital classrooms, science labs, and computer center in Adugodi, Bangalore.",
+    url: "https://srisaienglishhighschool.in/facilities",
+    images: ["/og-image.jpeg"],
+  },
 };
 
 export default function FacilitiesPage() {
