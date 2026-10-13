@@ -17,7 +17,7 @@ export default function AboutPage() {
     <>
       <PageHeader
         badge="Our Story & Philosophy"
-        title="Built on a Promise, Not a Privilege"
+        title="25 Years of Educational Excellence & Values"
         description="For 25 years, Sri Sai English High School has been shaping minds and nurturing character through quality education, holistic development, and service to society."
         backgroundImage="/commons/about-hero.JPG"
       />

@@ -143,7 +143,7 @@ export function AboutPreview() {
               About Sri Sai English High School
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight text-balance">
-              Built on a Promise, Not a Privilege
+              Nurturing Minds, Building Futures
             </h2>
             <p className="text-foreground/90 text-lg leading-relaxed mb-4 font-medium">
               <strong>Sri Sai English High School</strong>, established in 1999,

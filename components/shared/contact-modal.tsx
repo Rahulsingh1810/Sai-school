@@ -150,7 +150,7 @@ export function ContactModal({
           </div>
 
           <DialogTitle className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-foreground tracking-tight leading-snug">
-            Connect with Sai English High School
+            Connect with Sri Sai English High School
           </DialogTitle>
 
           <DialogDescription className="text-xs sm:text-sm text-muted-foreground leading-normal sm:leading-relaxed">

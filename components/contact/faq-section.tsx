@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "How can parents visit the school or inquire about admissions?",
     answer:
-      "Parents and prospective students are warmly welcome to visit the school campus during office hours. You can also reach us via phone at +91 96635 26666 / +91 90350 31256 or email srisaiselhs2000@gmail.com.",
+      "Parents and prospective students are warmly welcome to visit the school campus during office hours. You can also reach us via phone at +91 96635 26666 / +91 90350 31256 or email Srisaisehs2000@gmail.com.",
   },
 ];
 

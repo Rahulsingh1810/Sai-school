@@ -1,6 +1,17 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { GraduationCap, Mail, Phone, MapPin } from "lucide-react";
+import { GraduationCap, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 const quickLinks = [
   { href: "/about", label: "About Us" },
@@ -18,6 +29,7 @@ const academicLinks = [
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const [isMapOpen, setIsMapOpen] = useState(false);
 
   return (
     <footer className="bg-primary text-primary-foreground">
@@ -99,11 +111,21 @@ export function Footer() {
               <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-accent"></span>
             </h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-accent mt-0.5 shrink-0" />
-                <span className="text-primary-foreground/80 text-sm">
-                  No. 7, II Main Road, Adugodi, Bangalore – 560030
-                </span>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => setIsMapOpen(true)}
+                  className="flex items-start gap-3 text-left group text-primary-foreground/80 hover:text-accent transition-colors cursor-pointer w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-lg"
+                  aria-label="Open school location map"
+                >
+                  <MapPin className="w-5 h-5 text-accent mt-0.5 shrink-0 group-hover:scale-110 transition-transform" />
+                  <span className="text-sm">
+                    No. 7, II Main Road, Adugodi, Bangalore – 560030
+                    <span className="block text-xs text-accent font-medium mt-1 group-hover:underline">
+                      View on Google Maps ↗
+                    </span>
+                  </span>
+                </button>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-accent mt-0.5 shrink-0" />
@@ -125,16 +147,72 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent shrink-0" />
                 <a
-                  href="mailto:srisaiselhs2000@gmail.com"
+                  href="mailto:Srisaisehs2000@gmail.com"
                   className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
                 >
-                  srisaiselhs2000@gmail.com
+                  Srisaisehs2000@gmail.com
                 </a>
               </li>
             </ul>
           </div>
         </div>
       </div>
+
+      {/* Google Maps Location Modal */}
+      <Dialog open={isMapOpen} onOpenChange={setIsMapOpen}>
+        <DialogContent className="max-w-4xl w-[calc(100%-2rem)] p-4 sm:p-6 rounded-2xl sm:rounded-3xl border-border/70 shadow-2xl overflow-hidden bg-background">
+          <DialogHeader className="text-left space-y-1.5 pr-8">
+            <div className="flex items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
+                <MapPin className="w-3.5 h-3.5 text-accent shrink-0" />
+                School Location &amp; Directions
+              </span>
+            </div>
+            <DialogTitle className="font-serif text-xl sm:text-2xl font-bold text-foreground">
+              Sri Sai English High School
+            </DialogTitle>
+            <DialogDescription className="text-xs sm:text-sm text-muted-foreground">
+              No. 7, II Main Road, Adugodi, Bangalore – 560030
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="relative w-full h-[320px] sm:h-[420px] lg:h-[480px] rounded-xl sm:rounded-2xl overflow-hidden border border-border/70 shadow-inner mt-2">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.4441298020024!2d77.6068511!3d12.943407899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15b571457ee7%3A0xcfc7286dad4d554!2sSri%20Sai%20English%20High%20School!5e0!3m2!1sen!2sin!4v1791787055117!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              title="Sri Sai English High School Location Adugodi"
+              className="w-full h-full"
+            />
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-2">
+            <span className="text-xs text-muted-foreground">
+              Landmark: Near Adugodi, Bengaluru, Karnataka
+            </span>
+            <Button
+              asChild
+              size="sm"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-sm ml-auto"
+            >
+              <a
+                href="https://maps.app.goo.gl/mU9wwrvWndQuBn3B6?g_st=iw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold"
+              >
+                <MapPin className="w-4 h-4 text-accent" />
+                Open in Google Maps App
+                <ExternalLink className="w-3.5 h-3.5 ml-0.5 opacity-70" />
+              </a>
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
 
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">

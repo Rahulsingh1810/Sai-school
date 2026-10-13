@@ -33,7 +33,7 @@ const contactCards = [
   {
     icon: Mail,
     title: "Email Address",
-    details: ["srisaiselhs2000@gmail.com"],
+    details: ["Srisaisehs2000@gmail.com"],
   },
   {
     icon: Clock,

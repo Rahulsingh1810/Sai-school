@@ -50,7 +50,7 @@ export const SCHOOL_EVENTS: Event[] = [
     image: "/events/raj/1.jpg",
     description:
       "A grand Silver Jubilee cultural festival celebrating 25 years of excellence with vibrant music, dance, theatrical performances, and student honours.",
-    photos: generatePhotos("raj", 20, "Rajathakalothsava"),
+    photos: generatePhotos("raj", 28, "Rajathakalothsava"),
   },
   {
     id: 4,

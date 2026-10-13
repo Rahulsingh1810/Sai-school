@@ -14,7 +14,7 @@ const slides = [
     image: "/home-car/slide1.JPG",
     title: "Welcome to Sri Sai English High School",
     subtitle:
-      "Built on a Promise, Not a Privilege — Empowering Young Minds Since 1999",
+      "Nurturing Minds, Building Futures — Empowering Young Minds Since 1999",
     cta: "Discover Our Story",
     href: "/about",
   },
